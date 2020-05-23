@@ -1,0 +1,6 @@
+framework module Pods_Tidying_Up_Tidying_UpUITests {
+  umbrella header "Pods-Tidying Up-Tidying UpUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

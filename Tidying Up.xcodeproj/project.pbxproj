@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EC7CA42C0AF7D166375549D /* Pods_Tidying_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A383CEC29A235EDB710B69A /* Pods_Tidying_Up.framework */; };
+		20779957AB43D0A7FFCE60BC /* Pods_Tidying_Up_Tidying_UpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */; };
 		38A8F1C024683C6F00C57CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */; };
 		38A8F1C224683C6F00C57CB6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C124683C6F00C57CB6 /* GameScene.sks */; };
 		38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C324683C6F00C57CB6 /* Actions.sks */; };
@@ -17,6 +19,10 @@
 		38A8F1D024683C7000C57CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1CE24683C7000C57CB6 /* LaunchScreen.storyboard */; };
 		38A8F1DB24683C7000C57CB6 /* Tidying_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1DA24683C7000C57CB6 /* Tidying_UpTests.swift */; };
 		38A8F1E624683C7000C57CB6 /* Tidying_UpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1E524683C7000C57CB6 /* Tidying_UpUITests.swift */; };
+		38E6DE502478D7E80015A980 /* SignUpViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */; };
+		38E6DE522479165D0015A980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38E6DE512479165D0015A980 /* GoogleService-Info.plist */; };
+		38FA7B7724779FFD0010DC6A /* LoginpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */; };
+		B87A596F1D09A84D9162DA39 /* Pods_Tidying_UpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9434F70048A4C94845DB633 /* Pods_Tidying_UpTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ED0C6287C4D0ADC89618107 /* Pods-Tidying UpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying UpTests.release.xcconfig"; path = "Target Support Files/Pods-Tidying UpTests/Pods-Tidying UpTests.release.xcconfig"; sourceTree = "<group>"; };
+		1A383CEC29A235EDB710B69A /* Pods_Tidying_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B2A9A5369E9C3C0A37F3C6 /* Pods-Tidying UpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying UpTests.debug.xcconfig"; path = "Target Support Files/Pods-Tidying UpTests/Pods-Tidying UpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		36DBEC0F93CE883AE3DE34C5 /* Pods-Tidying Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up.debug.xcconfig"; path = "Target Support Files/Pods-Tidying Up/Pods-Tidying Up.debug.xcconfig"; sourceTree = "<group>"; };
 		38A8F1BC24683C6F00C57CB6 /* Tidying Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tidying Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A8F1C124683C6F00C57CB6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -53,6 +63,14 @@
 		38A8F1E124683C7000C57CB6 /* Tidying UpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tidying UpUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8F1E524683C7000C57CB6 /* Tidying_UpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tidying_UpUITests.swift; sourceTree = "<group>"; };
 		38A8F1E724683C7000C57CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewcontroller.swift; sourceTree = "<group>"; };
+		38E6DE512479165D0015A980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginpageViewController.swift; sourceTree = "<group>"; };
+		AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_Up_Tidying_UpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9434F70048A4C94845DB633 /* Pods_Tidying_UpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_UpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1F54BA083332C4BDE75FC0 /* Pods-Tidying Up-Tidying UpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up-Tidying UpUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tidying Up-Tidying UpUITests/Pods-Tidying Up-Tidying UpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EDCEBFDBDE094C3353B24B5B /* Pods-Tidying Up-Tidying UpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up-Tidying UpUITests.release.xcconfig"; path = "Target Support Files/Pods-Tidying Up-Tidying UpUITests/Pods-Tidying Up-Tidying UpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F993AD26715B4D0B27ADAD72 /* Pods-Tidying Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up.release.xcconfig"; path = "Target Support Files/Pods-Tidying Up/Pods-Tidying Up.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC7CA42C0AF7D166375549D /* Pods_Tidying_Up.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B87A596F1D09A84D9162DA39 /* Pods_Tidying_UpTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +94,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20779957AB43D0A7FFCE60BC /* Pods_Tidying_Up_Tidying_UpUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26C0CE668E7CAFD08572B4A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36DBEC0F93CE883AE3DE34C5 /* Pods-Tidying Up.debug.xcconfig */,
+				F993AD26715B4D0B27ADAD72 /* Pods-Tidying Up.release.xcconfig */,
+				DD1F54BA083332C4BDE75FC0 /* Pods-Tidying Up-Tidying UpUITests.debug.xcconfig */,
+				EDCEBFDBDE094C3353B24B5B /* Pods-Tidying Up-Tidying UpUITests.release.xcconfig */,
+				23B2A9A5369E9C3C0A37F3C6 /* Pods-Tidying UpTests.debug.xcconfig */,
+				0ED0C6287C4D0ADC89618107 /* Pods-Tidying UpTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2A14565337A6C54824CD2B64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A383CEC29A235EDB710B69A /* Pods_Tidying_Up.framework */,
+				AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */,
+				D9434F70048A4C94845DB633 /* Pods_Tidying_UpTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		38A8F1B324683C6F00C57CB6 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +131,8 @@
 				38A8F1D924683C7000C57CB6 /* Tidying UpTests */,
 				38A8F1E424683C7000C57CB6 /* Tidying UpUITests */,
 				38A8F1BD24683C6F00C57CB6 /* Products */,
+				26C0CE668E7CAFD08572B4A7 /* Pods */,
+				2A14565337A6C54824CD2B64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,9 +154,12 @@
 				38A8F1C324683C6F00C57CB6 /* Actions.sks */,
 				38A8F1C524683C6F00C57CB6 /* GameScene.swift */,
 				38A8F1C724683C6F00C57CB6 /* GameViewController.swift */,
+				38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */,
+				38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */,
 				38A8F1C924683C6F00C57CB6 /* Main.storyboard */,
 				38A8F1CC24683C7000C57CB6 /* Assets.xcassets */,
 				38A8F1CE24683C7000C57CB6 /* LaunchScreen.storyboard */,
+				38E6DE512479165D0015A980 /* GoogleService-Info.plist */,
 				38A8F1D124683C7000C57CB6 /* Info.plist */,
 			);
 			path = "Tidying Up";
@@ -141,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38A8F1EA24683C7000C57CB6 /* Build configuration list for PBXNativeTarget "Tidying Up" */;
 			buildPhases = (
+				97174CE7E719C3019A5A838C /* [CP] Check Pods Manifest.lock */,
 				38A8F1B824683C6F00C57CB6 /* Sources */,
 				38A8F1B924683C6F00C57CB6 /* Frameworks */,
 				38A8F1BA24683C6F00C57CB6 /* Resources */,
+				E3B0B4C208D4650C91521256 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38A8F1ED24683C7000C57CB6 /* Build configuration list for PBXNativeTarget "Tidying UpTests" */;
 			buildPhases = (
+				7CBB155FEEF328106DB58A65 /* [CP] Check Pods Manifest.lock */,
 				38A8F1D224683C7000C57CB6 /* Sources */,
 				38A8F1D324683C7000C57CB6 /* Frameworks */,
 				38A8F1D424683C7000C57CB6 /* Resources */,
@@ -176,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38A8F1F024683C7000C57CB6 /* Build configuration list for PBXNativeTarget "Tidying UpUITests" */;
 			buildPhases = (
+				34ED61263B9A281D01288183 /* [CP] Check Pods Manifest.lock */,
 				38A8F1DD24683C7000C57CB6 /* Sources */,
 				38A8F1DE24683C7000C57CB6 /* Frameworks */,
 				38A8F1DF24683C7000C57CB6 /* Resources */,
+				2E2F5F2FE616F8F9E7E2255A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +297,7 @@
 				38A8F1CD24683C7000C57CB6 /* Assets.xcassets in Resources */,
 				38A8F1D024683C7000C57CB6 /* LaunchScreen.storyboard in Resources */,
 				38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */,
+				38E6DE522479165D0015A980 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,12 +317,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E2F5F2FE616F8F9E7E2255A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidying Up-Tidying UpUITests/Pods-Tidying Up-Tidying UpUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidying Up-Tidying UpUITests/Pods-Tidying Up-Tidying UpUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tidying Up-Tidying UpUITests/Pods-Tidying Up-Tidying UpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34ED61263B9A281D01288183 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tidying Up-Tidying UpUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CBB155FEEF328106DB58A65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tidying UpTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97174CE7E719C3019A5A838C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tidying Up-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3B0B4C208D4650C91521256 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidying Up/Pods-Tidying Up-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tidying Up/Pods-Tidying Up-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tidying Up/Pods-Tidying Up-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		38A8F1B824683C6F00C57CB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				38A8F1C624683C6F00C57CB6 /* GameScene.swift in Sources */,
+				38FA7B7724779FFD0010DC6A /* LoginpageViewController.swift in Sources */,
+				38E6DE502478D7E80015A980 /* SignUpViewcontroller.swift in Sources */,
 				38A8F1C824683C6F00C57CB6 /* GameViewController.swift in Sources */,
 				38A8F1C024683C6F00C57CB6 /* AppDelegate.swift in Sources */,
 			);
@@ -440,6 +600,7 @@
 		};
 		38A8F1EB24683C7000C57CB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DBEC0F93CE883AE3DE34C5 /* Pods-Tidying Up.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +619,7 @@
 		};
 		38A8F1EC24683C7000C57CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F993AD26715B4D0B27ADAD72 /* Pods-Tidying Up.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +638,7 @@
 		};
 		38A8F1EE24683C7000C57CB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B2A9A5369E9C3C0A37F3C6 /* Pods-Tidying UpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -497,6 +660,7 @@
 		};
 		38A8F1EF24683C7000C57CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED0C6287C4D0ADC89618107 /* Pods-Tidying UpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -518,6 +682,7 @@
 		};
 		38A8F1F124683C7000C57CB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD1F54BA083332C4BDE75FC0 /* Pods-Tidying Up-Tidying UpUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -537,6 +702,7 @@
 		};
 		38A8F1F224683C7000C57CB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDCEBFDBDE094C3353B24B5B /* Pods-Tidying Up-Tidying UpUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
