@@ -14,12 +14,12 @@ class SignUpViewcontroller: UIViewController {
 //    property for connecting with the storyboard UI
     @IBOutlet weak var Usernametextfield : UITextField!
     @IBOutlet weak var PasswordTextFIeld : UITextField!
-    
     let backgroundview = UIImageView()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadbackground()
 
         // Do any additional setup after loading the view.
     }
@@ -28,7 +28,7 @@ class SignUpViewcontroller: UIViewController {
             if user != nil
             {
                 print("user created")
-//                self.performSegue(withIdentifier: "SignUpButton", sender: self)
+                self.performSegue(withIdentifier: "gotologinpage", sender: self)
         
             }
             else

@@ -60,6 +60,9 @@
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Login:" destination="bUG-YX-OAQ" eventType="touchUpInside" id="z0X-gy-ISs"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0X-Re-HYl">
                                         <rect key="frame" x="45" y="121" width="133" height="21"/>
@@ -80,7 +83,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <state key="normal" title="Sign up here"/>
                                         <connections>
-                                            <segue destination="2Dx-7n-dFZ" kind="show" id="MXI-Fm-C8x"/>
+                                            <segue destination="2Dx-7n-dFZ" kind="show" id="mRI-NR-ILj"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -120,6 +123,11 @@
                         <viewLayoutGuide key="safeArea" id="GwB-fX-m3T"/>
                     </view>
                     <navigationItem key="navigationItem" id="LKX-eD-Obd"/>
+                    <connections>
+                        <outlet property="PasswordTextfield" destination="DYL-ml-7Ml" id="nkm-aS-hlk"/>
+                        <outlet property="UsernameTexfield" destination="rMH-N7-kIy" id="yHh-jR-aXu"/>
+                        <segue destination="2Dx-7n-dFZ" kind="show" identifier="gotosignuppage" id="Z4s-5T-2h2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-Lg-LLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +172,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="signupButton:" destination="2Dx-7n-dFZ" eventType="touchUpInside" id="oAY-yZ-8gv"/>
+                                            <action selector="signupButton:" destination="2Dx-7n-dFZ" eventType="touchUpInside" id="owz-iq-VmD"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCR-cN-D9x">
@@ -213,6 +221,7 @@
                     <connections>
                         <outlet property="PasswordTextFIeld" destination="2hh-Vh-fco" id="0Sy-eg-D1L"/>
                         <outlet property="Usernametextfield" destination="8xn-Hy-Otl" id="FlK-lw-YnP"/>
+                        <segue destination="bUG-YX-OAQ" kind="show" identifier="gotologinpage" id="Cuv-nJ-F4I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G5H-6e-OcW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,4 +229,7 @@
             <point key="canvasLocation" x="-1130.3571428571429" y="837.68115942028987"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Z4s-5T-2h2"/>
+    </inferredMetricsTieBreakers>
 </document>

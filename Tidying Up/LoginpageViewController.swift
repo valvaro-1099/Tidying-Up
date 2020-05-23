@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginpageViewController: UIViewController {
     let backgroundview = UIImageView()
+    @IBOutlet weak var UsernameTexfield: UITextField!
+    @IBOutlet weak var PasswordTextfield: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +36,17 @@ class LoginpageViewController: UIViewController {
             view.sendSubviewToBack(backgroundview)
         }
     
-
+    @IBAction func Login(_ sender: UIButton) {
+        Auth.auth().signIn(withEmail: UsernameTexfield.text!, password: PasswordTextfield.text!) { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "gotosignuppage", sender: self)
+            }
+            else {
+                print("there is an error")
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
