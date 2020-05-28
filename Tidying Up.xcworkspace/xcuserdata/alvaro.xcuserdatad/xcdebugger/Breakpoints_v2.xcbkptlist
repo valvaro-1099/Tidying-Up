@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A1A1B374-F463-4C02-B397-4908456E7B38"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "889920DF-B5C1-4662-8645-7035D8EDA492"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/LoginpageViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "LoginpageViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC3794AD-AD87-4543-939C-7D1A839D251D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/SignUpViewcontroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "signupButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EB83A50-7E2B-4428-94FE-49EA6AA4CAD6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/SignUpViewcontroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "signupButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C350B2A-5240-47A1-8288-D2D7BDAEC46E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/SignUpViewcontroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "signupButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C350B2A-5240-47A1-8288-D2D7BDAEC46E - 6de388e1debf017d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tidying_Up.SignUpViewcontroller.signupButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Tidying Up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvaro/XcodeProject/Tidying%20Up/Tidying%20Up/SignUpViewcontroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "433">
+               </Location>
+               <Location
+                  uuid = "8C350B2A-5240-47A1-8288-D2D7BDAEC46E - ec349184453a4f96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tidying_Up.SignUpViewcontroller.signupButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Tidying Up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvaro/XcodeProject/Tidying%20Up/Tidying%20Up/SignUpViewcontroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D11165A1-70E5-4DCC-B1FA-C6E23714621B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/SignUpViewcontroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "signupButton(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D11165A1-70E5-4DCC-B1FA-C6E23714621B - 24de48fb0c72a8cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tidying_Up.SignUpViewcontroller.signupButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Tidying Up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvaro/XcodeProject/Tidying%20Up/Tidying%20Up/SignUpViewcontroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "87">
+               </Location>
+               <Location
+                  uuid = "D11165A1-70E5-4DCC-B1FA-C6E23714621B - 6de388e1debf017d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Tidying_Up.SignUpViewcontroller.signupButton(__C.UIButton) -&gt; ()"
+                  moduleName = "Tidying Up"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alvaro/XcodeProject/Tidying%20Up/Tidying%20Up/SignUpViewcontroller.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF848107-B286-4E09-BEB8-66A78DBD08BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tidying Up/SignUpViewcontroller.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "signupButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -16,7 +16,7 @@ class GameScene: SKScene {
 //      array that will hold the different type of animation
     var idlearray = [SKTexture]()
     var runningarray = [SKTexture()]
-    var moving = false
+    var moving = true
     
     override func didMove(to view: SKView) {
         
@@ -32,7 +32,8 @@ class GameScene: SKScene {
             let texturename = "Run (\(i))"
             runningarray.append(SKTexture(imageNamed: texturename))
         }
-       playeridle()
+
+       
     
     }
 //    drag type of touch
@@ -41,10 +42,11 @@ class GameScene: SKScene {
         
         for touch in touches
         {
-            
+
+            player.run(SKAction.animate(with: runningarray, timePerFrame: 0.1))
              let touchlocation = touch.location(in: self)
             player.position = touchlocation;
-            player.run(SKAction.animate(with: runningarray, timePerFrame: 0.1))
+            
             
             
         }
@@ -52,9 +54,16 @@ class GameScene: SKScene {
 //    for when the player is idle
     func playeridle()
     {
-        removeAllActions()
-        player.run(SKAction.repeatForever(SKAction.animate(with: idlearray, timePerFrame: 0.1)))
+        while(!moving)
+        {
+            player.run(SKAction.animate(with: idlearray, timePerFrame: 0.1))
+        }
+    
+//        player.run(SKAction.repeatForever(SKAction.animate(with: idlearray, timePerFrame: 0.1)))
+//        player.run(SKAction.repeatForever(SKAction.animate(with: <#T##[SKTexture]#>, timePerFrame: <#T##TimeInterval#>))
+
     }
+
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered

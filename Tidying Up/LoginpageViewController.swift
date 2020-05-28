@@ -16,26 +16,11 @@ class LoginpageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadbackground()
+
 
       
     }
-    
-    //    load the background for loginpage
-        func loadbackground(){
-            view.addSubview(backgroundview)
-            backgroundview.translatesAutoresizingMaskIntoConstraints = false
-            backgroundview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-            backgroundview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-    //        left side anchor
-            backgroundview.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-    //        right side anchor
-             backgroundview.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-    //        set image
-            backgroundview.image = UIImage(named: "loginpage")
-            view.sendSubviewToBack(backgroundview)
-        }
-    
+// Check if there is user with that email and password in firebase
     @IBAction func Login(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: UsernameTexfield.text!, password: PasswordTextfield.text!) { (user, error) in
             if user != nil {

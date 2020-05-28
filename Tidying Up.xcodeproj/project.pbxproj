@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0EC7CA42C0AF7D166375549D /* Pods_Tidying_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A383CEC29A235EDB710B69A /* Pods_Tidying_Up.framework */; };
 		20779957AB43D0A7FFCE60BC /* Pods_Tidying_Up_Tidying_UpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */; };
+		3850D302247DCC03000E939C /* LevelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850D301247DCC03000E939C /* LevelPageViewController.swift */; };
+		3850D304247E18DD000E939C /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850D303247E18DD000E939C /* ShopViewController.swift */; };
 		38A8F1C024683C6F00C57CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */; };
 		38A8F1C224683C6F00C57CB6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C124683C6F00C57CB6 /* GameScene.sks */; };
 		38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C324683C6F00C57CB6 /* Actions.sks */; };
 		38A8F1C624683C6F00C57CB6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1C524683C6F00C57CB6 /* GameScene.swift */; };
 		38A8F1C824683C6F00C57CB6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1C724683C6F00C57CB6 /* GameViewController.swift */; };
-		38A8F1CB24683C6F00C57CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C924683C6F00C57CB6 /* Main.storyboard */; };
+		38A8F1CB24683C6F00C57CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C924683C6F00C57CB6 /* Main.storyboard */; settings = {ASSET_TAGS = (insideLevel, ); }; };
 		38A8F1CD24683C7000C57CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1CC24683C7000C57CB6 /* Assets.xcassets */; };
 		38A8F1D024683C7000C57CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1CE24683C7000C57CB6 /* LaunchScreen.storyboard */; };
 		38A8F1DB24683C7000C57CB6 /* Tidying_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1DA24683C7000C57CB6 /* Tidying_UpTests.swift */; };
@@ -47,6 +49,8 @@
 		1A383CEC29A235EDB710B69A /* Pods_Tidying_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B2A9A5369E9C3C0A37F3C6 /* Pods-Tidying UpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying UpTests.debug.xcconfig"; path = "Target Support Files/Pods-Tidying UpTests/Pods-Tidying UpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36DBEC0F93CE883AE3DE34C5 /* Pods-Tidying Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up.debug.xcconfig"; path = "Target Support Files/Pods-Tidying Up/Pods-Tidying Up.debug.xcconfig"; sourceTree = "<group>"; };
+		3850D301247DCC03000E939C /* LevelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPageViewController.swift; sourceTree = "<group>"; };
+		3850D303247E18DD000E939C /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		38A8F1BC24683C6F00C57CB6 /* Tidying Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tidying Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A8F1C124683C6F00C57CB6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -128,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				38A8F1BE24683C6F00C57CB6 /* Tidying Up */,
-				38A8F1D924683C7000C57CB6 /* Tidying UpTests */,
 				38A8F1E424683C7000C57CB6 /* Tidying UpUITests */,
 				38A8F1BD24683C6F00C57CB6 /* Products */,
 				26C0CE668E7CAFD08572B4A7 /* Pods */,
@@ -156,11 +159,14 @@
 				38A8F1C724683C6F00C57CB6 /* GameViewController.swift */,
 				38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */,
 				38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */,
+				3850D301247DCC03000E939C /* LevelPageViewController.swift */,
+				3850D303247E18DD000E939C /* ShopViewController.swift */,
 				38A8F1C924683C6F00C57CB6 /* Main.storyboard */,
 				38A8F1CC24683C7000C57CB6 /* Assets.xcassets */,
 				38A8F1CE24683C7000C57CB6 /* LaunchScreen.storyboard */,
 				38E6DE512479165D0015A980 /* GoogleService-Info.plist */,
 				38A8F1D124683C7000C57CB6 /* Info.plist */,
+				38A8F1D924683C7000C57CB6 /* Tidying UpTests */,
 			);
 			path = "Tidying Up";
 			sourceTree = "<group>";
@@ -250,6 +256,12 @@
 		38A8F1B424683C6F00C57CB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					"Content View",
+					ContentView,
+					insideLevel,
+					test,
+				);
 				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "vincent Alvaro";
@@ -425,10 +437,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3850D302247DCC03000E939C /* LevelPageViewController.swift in Sources */,
 				38A8F1C624683C6F00C57CB6 /* GameScene.swift in Sources */,
 				38FA7B7724779FFD0010DC6A /* LoginpageViewController.swift in Sources */,
 				38E6DE502478D7E80015A980 /* SignUpViewcontroller.swift in Sources */,
 				38A8F1C824683C6F00C57CB6 /* GameViewController.swift in Sources */,
+				3850D304247E18DD000E939C /* ShopViewController.swift in Sources */,
 				38A8F1C024683C6F00C57CB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

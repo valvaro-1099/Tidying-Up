@@ -8,50 +8,63 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
 class SignUpViewcontroller: UIViewController {
     
 //    property for connecting with the storyboard UI
     @IBOutlet weak var Usernametextfield : UITextField!
     @IBOutlet weak var PasswordTextFIeld : UITextField!
+    
     let backgroundview = UIImageView()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadbackground()
+
 
         // Do any additional setup after loading the view.
     }
+//    Sign up user to firebase
     @IBAction func signupButton(_ sender: UIButton){
+        
+        
+        
         Auth.auth().createUser(withEmail: Usernametextfield.text!, password: PasswordTextFIeld.text!) { (user, error) in
+//          check if username and password is already been type by the user
             if user != nil
             {
-                print("user created")
-                self.performSegue(withIdentifier: "gotologinpage", sender: self)
-        
+                let ref = Database.database().reference().child("users")
+
+                ref.queryOrdered(byChild: "email").queryEqual(toValue: self.Usernametextfield.text!).observe(.value, with: { snapshot in
+                        if snapshot.exists()
+                        {
+
+                           //User email exist
+                            _ = UIAlertController(title: "emailalreadyregistered", message: "email has already been registered under another user" , preferredStyle: .alert)
+                            
+                        }
+                        else
+                        {
+                            self.performSegue(withIdentifier: "gotologinpage", sender: self)
+                            
+                        }
+
+                    })
+                            
+        self.performSegue(withIdentifier: "gotologinpage", sender: self)
             }
             else
             {
-                print("error")
+                //User email exist
+                _ = UIAlertController(title: "emailalreadyregistered", message: "email has already been registered under another user" , preferredStyle: .alert)
+            
             }
             
-        }
+        }//create user
     }
-    //    load the background for loginpage
-           func loadbackground(){
-               view.addSubview(backgroundview)
-               backgroundview.translatesAutoresizingMaskIntoConstraints = false
-               backgroundview.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-               backgroundview.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-       //        left side anchor
-               backgroundview.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-       //        right side anchor
-                backgroundview.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-       //        set image
-               backgroundview.image = UIImage(named: "loginpage")
-               view.sendSubviewToBack(backgroundview)
-           }
+ 
        
 
 }
