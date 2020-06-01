@@ -12,18 +12,23 @@ import GameplayKit
 class GameScene: SKScene {
     
 //      load the player in the gamescene.sks
-    lazy var player = self.childNode(withName: "player") as! SKSpriteNode;
+    var player = SKSpriteNode()
 //      array that will hold the different type of animation
     var idlearray = [SKTexture]()
-    var runningarray = [SKTexture()]
-   var Base = SKSpriteNode(imageNamed: "base")
-    var joystick = SKSpriteNode(imageNamed: "jostick")
+    var runningarray = [SKTexture()];
+    var base = SKSpriteNode(imageNamed: "base")
+    var joystick = SKSpriteNode(imageNamed: "joystick")
+    var joystickactive = false
+    var xJoystickDelta = CGFloat();
+    var yJoystickDelta = CGFloat();
+    var Cam = SKCameraNode()
 //    check if joystick is touch
 
 
     override func didMove(to view: SKView) {
         
         self.scaleMode = .fill
+        player = self.childNode(withName: "player") as! SKSpriteNode;
         for i in 1..<10
         {
             let textturename2 = "Run (\(i))"
@@ -31,66 +36,96 @@ class GameScene: SKScene {
             idlearray.append(SKTexture(imageNamed: textturename))
             runningarray.append(SKTexture(imageNamed: textturename2))
         }
-//        width: 194.09, height: 185.34)
-        Base.size = CGSize(width: 194, height: 184)
-        Base.position = CGPoint(x:-470.162 , y: -354.178)
-        Base.addChild(joystick)
-        joystick.position = Base.position;
-        joystick.size = CGSize(width: 120, height: 140)
+        Cam.addChild(base)
+//        self.addChild(base)
+        base.position = CGPoint(x: -484.908, y: -410.399)
+        
+        Cam.addChild(joystick)
+//        self.addChild(joystick)
+        joystick.position = base.position
+        
+        self.camera = Cam
+        self.addChild(Cam)
+
+        
+       
         
        
     }
-////    drag type of touch
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//
-//        for touch in touches
-//        {
-//
-//            player.run(SKAction.animate(with: runningarray, timePerFrame: 0.1, resize: false, restore: true))
-//             let touchlocation = touch.location(in: self)
-//            player.position = touchlocation;
-//        }
-//    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first!
-//        let location = touch.location(in: self)
-//        player.run(SKAction.move(to: location, duration: 2))
+
+        for touch in touches {
+            let location = touch.location(in: self)
+            if (base.frame.contains(location)){
+                joystickactive = true
+            }
+            else{
+                joystickactive = false
+            }
+        }
+        
         
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         for touch in touches
         {
+            if(joystickactive == true)
+            {
             let location = touch.location(in: self)
-            let vector = CGVector(dx: location.x - Base.position.x, dy: location.y - Base.position.y)
+            let vector = CGVector(dx: location.x - base.position.x, dy: location.y - base.position.y)
+            xJoystickDelta = location.x - base.position.x
+            yJoystickDelta = location.y - base.position.y
             let angle = atan2(vector.dy, vector.dx)
 //            let deg = angle * CGFloat(180 / M_PI);
             
-            let lenght:CGFloat = Base.frame.size.height / 2 - 20
-                  let xDist: CGFloat = sin(angle - 1.57079633) * lenght
-                  let yDist: CGFloat = cos(angle - 1.57079633) * lenght
+            let lenght:CGFloat = base.frame.size.height / 2
+                  let xDist: CGFloat = sin(angle) * lenght
+                  let yDist: CGFloat = cos(angle) * lenght
 
             
-            joystick.position = CGPoint(x: Base.position.x - xDist, y: Base.position.y + yDist)
+            joystick.position = CGPoint(x: base.position.x - xDist, y: base.position.y + yDist)
 
-            if (Base.frame.contains(location))
+            if (base.frame.contains(location))
             {
 
                        joystick.position = location
             }else
             {
 
-                joystick.position = CGPoint(x: Base.position.x - xDist, y: Base.position.y + yDist)
-
+                    joystick.position = CGPoint(x: base.position.x - xDist, y: base.position.y + yDist)
             }
-
-            
-            
+                
+            }
+        }
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (joystickactive == true)
+        {
+            let move:SKAction = SKAction.move(to: base.position, duration: 0.2)
+            move.timingMode = .easeOut
+            joystick.run(move)
+            xJoystickDelta = 0
+            yJoystickDelta = 0
         }
     }
 
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+        if(joystickactive == true)
+        {
+//        center the camera with camera
+        Cam.position = player.position
+        base.position.y = Cam.position.y/4
+        base.position.x = Cam.position.x/4
+        
+//        update the player according to the movement of the
+        let xScale = 0.03 //adjust to your preference
+        let yScale = 0.03//adjust to your preference
+        let xAdd = CGFloat(xScale) * self.xJoystickDelta
+        let yAdd = CGFloat(yScale) * self.yJoystickDelta
+        self.player.position.x += xAdd
+        self.player.position.y += yAdd
+        }
     }
 }
