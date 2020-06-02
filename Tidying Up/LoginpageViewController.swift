@@ -22,14 +22,23 @@ class LoginpageViewController: UIViewController {
     }
 // Check if there is user with that email and password in firebase
     @IBAction func Login(_ sender: UIButton) {
-        Auth.auth().signIn(withEmail: UsernameTexfield.text!, password: PasswordTextfield.text!) { (user, error) in
-            if user != nil {
-                self.performSegue(withIdentifier: "gotosignuppage", sender: self)
+//        Auth.auth().signIn(withEmail: UsernameTexfield.text!, password: PasswordTextfield.text!) { (user, error) in
+//            if user != nil {
+//                self.performSegue(withIdentifier: "gotosignuppage", sender: self)
+//            }
+//            else {
+//                print("there is an error")
+//            }
+//        }
+        let registered = UIAlertController(title: "login_failed", message: "username or password is wrong" , preferredStyle: .alert)
+        self.present(registered, animated: true, completion: nil)
+        
+        // change to desired number of seconds (in this case 5 seconds)
+        let when = DispatchTime.now() + 1
+        DispatchQueue.main.asyncAfter(deadline: when){
+          // your code with delay
+          registered.dismiss(animated: true, completion: nil)
             }
-            else {
-                print("there is an error")
-            }
-        }
     }
     
     /*

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Dx-7n-dFZ">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -590,8 +590,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="KCW-Yj-1qd"/>
                     <connections>
+                        <outlet property="Emailtextfield" destination="px5-G5-ThC" id="uh7-wD-dnk"/>
                         <outlet property="PasswordTextFIeld" destination="hVi-eY-30U" id="8bY-Me-oVp"/>
-                        <outlet property="Usernametextfield" destination="px5-G5-ThC" id="CVy-gi-XV5"/>
                         <segue destination="bUG-YX-OAQ" kind="show" identifier="gotologinpage" id="Cuv-nJ-F4I"/>
                     </connections>
                 </viewController>
@@ -602,8 +602,6 @@
         <!--level-->
         <scene sceneID="q4X-MC-0fW">
             <objects>
-                <tapGestureRecognizer id="SVS-tj-eFm"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g3v-fq-cWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController autoresizesArchivedViewToFullSize="NO" title="level" automaticallyAdjustsScrollViewInsets="NO" id="0X0-Ta-OAo" customClass="LevelPageViewController" customModule="Tidying_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="69M-5G-iOi">
                         <rect key="frame" x="0.0" y="0.0" width="4083" height="414"/>
@@ -674,6 +672,8 @@
                         <segue destination="zwk-jD-Vkv" kind="show" identifier="tolevelselection" id="COX-wJ-oHa"/>
                     </connections>
                 </viewController>
+                <tapGestureRecognizer id="SVS-tj-eFm"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3v-fq-cWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1130.6919642857142" y="1547.8260869565217"/>
         </scene>
@@ -1020,8 +1020,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="a03-Je-cCb"/>
-        <segue reference="Z4s-5T-2h2"/>
+        <segue reference="Hp8-cn-BuQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="GoogleLogo" width="22" height="22"/>
