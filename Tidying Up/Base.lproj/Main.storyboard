@@ -527,15 +527,11 @@
                                             <action selector="signupButton:" destination="2Dx-7n-dFZ" eventType="touchUpInside" id="FUB-bG-AvH"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sign up with Gmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM4-BJ-jM7">
-                                        <rect key="frame" x="73" y="251" width="89" height="12"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="GoogleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="GMJ-dT-Rdp">
-                                        <rect key="frame" x="43" y="246" width="22" height="22"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-cn-sli">
+                                        <rect key="frame" x="63" y="229" width="77" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
@@ -546,12 +542,9 @@
                                     <constraint firstItem="px5-G5-ThC" firstAttribute="top" secondItem="f9t-XZ-3hN" secondAttribute="bottom" constant="8" id="2E6-CF-L8D"/>
                                     <constraint firstAttribute="trailing" secondItem="f9t-XZ-3hN" secondAttribute="trailing" constant="23" id="2eT-M0-n2r"/>
                                     <constraint firstItem="f9t-XZ-3hN" firstAttribute="top" secondItem="owa-iC-HUi" secondAttribute="top" constant="33" id="4Qx-YY-37F"/>
-                                    <constraint firstAttribute="trailing" secondItem="eM4-BJ-jM7" secondAttribute="trailing" constant="58" id="7Dv-jM-ss9"/>
                                     <constraint firstAttribute="trailing" secondItem="7e1-aW-k6W" secondAttribute="trailing" constant="22" id="7oQ-p4-FL2"/>
                                     <constraint firstItem="hVi-eY-30U" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.120141" id="860-Nc-opO"/>
-                                    <constraint firstItem="eM4-BJ-jM7" firstAttribute="top" secondItem="7e1-aW-k6W" secondAttribute="bottom" constant="30" id="8IN-uu-922"/>
                                     <constraint firstAttribute="trailing" secondItem="px5-G5-ThC" secondAttribute="trailing" constant="23" id="9HT-Ql-hQg"/>
-                                    <constraint firstItem="eM4-BJ-jM7" firstAttribute="leading" secondItem="GMJ-dT-Rdp" secondAttribute="trailing" constant="8" id="AQb-TP-haq"/>
                                     <constraint firstItem="LQZ-aU-0bx" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.0742049" id="D3R-T5-MMy"/>
                                     <constraint firstItem="LQZ-aU-0bx" firstAttribute="top" secondItem="px5-G5-ThC" secondAttribute="bottom" constant="13" id="Nvk-2B-zOB"/>
                                     <constraint firstItem="hVi-eY-30U" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="22" id="SuP-1f-dqq"/>
@@ -559,14 +552,9 @@
                                     <constraint firstItem="f9t-XZ-3hN" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="24" id="UTq-j7-DxW"/>
                                     <constraint firstItem="px5-G5-ThC" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.120141" id="WDu-H2-fQO"/>
                                     <constraint firstItem="f9t-XZ-3hN" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.0742049" id="ZAp-pN-ZKN"/>
-                                    <constraint firstItem="GMJ-dT-Rdp" firstAttribute="top" secondItem="7e1-aW-k6W" secondAttribute="bottom" constant="25" id="a0q-9V-RGf"/>
                                     <constraint firstItem="7e1-aW-k6W" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="22" id="azi-80-2gm"/>
-                                    <constraint firstItem="eM4-BJ-jM7" firstAttribute="leading" secondItem="GMJ-dT-Rdp" secondAttribute="trailing" constant="8" id="cW6-sE-coC"/>
                                     <constraint firstItem="hVi-eY-30U" firstAttribute="top" secondItem="LQZ-aU-0bx" secondAttribute="bottom" constant="8" id="i1t-7E-OVl"/>
-                                    <constraint firstItem="GMJ-dT-Rdp" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="43" id="q0L-Od-chZ"/>
                                     <constraint firstAttribute="width" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="220:283" id="sfp-U9-C3Q"/>
-                                    <constraint firstAttribute="bottom" secondItem="GMJ-dT-Rdp" secondAttribute="bottom" constant="15" id="tEu-2T-r7X"/>
-                                    <constraint firstAttribute="bottom" secondItem="eM4-BJ-jM7" secondAttribute="bottom" constant="20" id="ucd-Rv-6Bc"/>
                                     <constraint firstAttribute="trailing" secondItem="LQZ-aU-0bx" secondAttribute="trailing" constant="19" id="vyD-ZZ-UUQ"/>
                                     <constraint firstItem="7e1-aW-k6W" firstAttribute="top" secondItem="hVi-eY-30U" secondAttribute="bottom" constant="19" id="www-AF-mtN"/>
                                 </constraints>
@@ -1023,7 +1011,6 @@
         <segue reference="Hp8-cn-BuQ"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="GoogleLogo" width="22" height="22"/>
         <image name="Idle1" width="416" height="454"/>
         <image name="Level page" width="4083" height="349"/>
         <image name="Settings" width="107" height="64"/>

@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseDatabase
+import GoogleSignIn
 
-class SignUpViewcontroller: UIViewController {
+class SignUpViewcontroller: UIViewController, Gid {
     
 //    property for connecting with the storyboard UI
     @IBOutlet weak var Emailtextfield : UITextField!
@@ -23,6 +24,12 @@ class SignUpViewcontroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+
+        // Automatically sign in the user.
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+
+        // ...
     }
     
 
@@ -76,6 +83,9 @@ class SignUpViewcontroller: UIViewController {
                            }
                           }
                        })// create user
+    }
+    func Google_Sign_In() {
+        
     }
     
     func check_email_password_validity() -> (Validity:Bool, Alert:UIAlertController) {
