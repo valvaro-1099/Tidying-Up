@@ -12,12 +12,13 @@ import Firebase
 import FirebaseDatabase
 import GoogleSignIn
 
-class SignUpViewcontroller: UIViewController, Gid {
+class SignUpViewcontroller: UIViewController{
     
 //    property for connecting with the storyboard UI
     @IBOutlet weak var Emailtextfield : UITextField!
     @IBOutlet weak var PasswordTextFIeld : UITextField!
     
+    @IBOutlet weak var Google_SignIn: GIDSignInButton!
     let backgroundview = UIImageView()
 
 
@@ -30,6 +31,7 @@ class SignUpViewcontroller: UIViewController, Gid {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
         // ...
+        
     }
     
 

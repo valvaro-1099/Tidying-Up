@@ -11,6 +11,8 @@
 		20779957AB43D0A7FFCE60BC /* Pods_Tidying_Up_Tidying_UpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */; };
 		3850D302247DCC03000E939C /* LevelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850D301247DCC03000E939C /* LevelPageViewController.swift */; };
 		3850D304247E18DD000E939C /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3850D303247E18DD000E939C /* ShopViewController.swift */; };
+		3887045F248DF787009B13C7 /* GoogleService-Info 4.53.06 pm.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3887045E248DF787009B13C7 /* GoogleService-Info 4.53.06 pm.plist */; };
+		38870461248DF796009B13C7 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38870460248DF796009B13C7 /* credentials.plist */; };
 		38A8F1C024683C6F00C57CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */; };
 		38A8F1C224683C6F00C57CB6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C124683C6F00C57CB6 /* GameScene.sks */; };
 		38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38A8F1C324683C6F00C57CB6 /* Actions.sks */; };
@@ -22,7 +24,6 @@
 		38A8F1DB24683C7000C57CB6 /* Tidying_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1DA24683C7000C57CB6 /* Tidying_UpTests.swift */; };
 		38A8F1E624683C7000C57CB6 /* Tidying_UpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A8F1E524683C7000C57CB6 /* Tidying_UpUITests.swift */; };
 		38E6DE502478D7E80015A980 /* SignUpViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */; };
-		38E6DE522479165D0015A980 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38E6DE512479165D0015A980 /* GoogleService-Info.plist */; };
 		38FA7B7724779FFD0010DC6A /* LoginpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */; };
 		B87A596F1D09A84D9162DA39 /* Pods_Tidying_UpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9434F70048A4C94845DB633 /* Pods_Tidying_UpTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,11 +52,13 @@
 		36DBEC0F93CE883AE3DE34C5 /* Pods-Tidying Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tidying Up.debug.xcconfig"; path = "Target Support Files/Pods-Tidying Up/Pods-Tidying Up.debug.xcconfig"; sourceTree = "<group>"; };
 		3850D301247DCC03000E939C /* LevelPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPageViewController.swift; sourceTree = "<group>"; };
 		3850D303247E18DD000E939C /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		3887045E248DF787009B13C7 /* GoogleService-Info 4.53.06 pm.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info 4.53.06 pm.plist"; sourceTree = "<group>"; };
+		38870460248DF796009B13C7 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		38A8F1BC24683C6F00C57CB6 /* Tidying Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tidying Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38A8F1C124683C6F00C57CB6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		38A8F1C324683C6F00C57CB6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		38A8F1C524683C6F00C57CB6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		38A8F1C524683C6F00C57CB6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; usesTabs = 0; };
 		38A8F1C724683C6F00C57CB6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		38A8F1CA24683C6F00C57CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38A8F1CC24683C7000C57CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +71,6 @@
 		38A8F1E524683C7000C57CB6 /* Tidying_UpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tidying_UpUITests.swift; sourceTree = "<group>"; };
 		38A8F1E724683C7000C57CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E6DE4F2478D7E80015A980 /* SignUpViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewcontroller.swift; sourceTree = "<group>"; };
-		38E6DE512479165D0015A980 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38FA7B7624779FFD0010DC6A /* LoginpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginpageViewController.swift; sourceTree = "<group>"; };
 		AA3D41D9454FD7694BA46ED5 /* Pods_Tidying_Up_Tidying_UpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_Up_Tidying_UpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9434F70048A4C94845DB633 /* Pods_Tidying_UpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tidying_UpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +166,8 @@
 				38A8F1C924683C6F00C57CB6 /* Main.storyboard */,
 				38A8F1CC24683C7000C57CB6 /* Assets.xcassets */,
 				38A8F1CE24683C7000C57CB6 /* LaunchScreen.storyboard */,
-				38E6DE512479165D0015A980 /* GoogleService-Info.plist */,
+				3887045E248DF787009B13C7 /* GoogleService-Info 4.53.06 pm.plist */,
+				38870460248DF796009B13C7 /* credentials.plist */,
 				38A8F1D124683C7000C57CB6 /* Info.plist */,
 				38A8F1D924683C7000C57CB6 /* Tidying UpTests */,
 			);
@@ -309,9 +312,10 @@
 				38A8F1CB24683C6F00C57CB6 /* Main.storyboard in Resources */,
 				38A8F1C224683C6F00C57CB6 /* GameScene.sks in Resources */,
 				38A8F1CD24683C7000C57CB6 /* Assets.xcassets in Resources */,
+				3887045F248DF787009B13C7 /* GoogleService-Info 4.53.06 pm.plist in Resources */,
 				38A8F1D024683C7000C57CB6 /* LaunchScreen.storyboard in Resources */,
+				38870461248DF796009B13C7 /* credentials.plist in Resources */,
 				38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */,
-				38E6DE522479165D0015A980 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

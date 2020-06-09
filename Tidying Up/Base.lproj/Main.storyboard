@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Dx-7n-dFZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -371,7 +371,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9fU-jS-Fpn" userLabel="loginview">
-                                <rect key="frame" x="642" y="55" width="220" height="283"/>
+                                <rect key="frame" x="642" y="55" width="220" height="332"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c70-eM-nnq">
                                         <rect key="frame" x="20" y="109" width="181" height="21"/>
@@ -395,8 +395,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNL-Gj-H8C">
+                                        <rect key="frame" x="22" y="191" width="176" height="30"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <state key="normal" title="login"/>
+                                        <connections>
+                                            <action selector="Login:" destination="bUG-YX-OAQ" eventType="touchUpInside" id="Tqc-q5-ifD"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tVv-1a-Bgs">
-                                        <rect key="frame" x="22" y="242" width="177" height="12"/>
+                                        <rect key="frame" x="24" y="267" width="177" height="12"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Don't have an account? ">
                                                 <attributes>
@@ -414,42 +422,61 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNL-Gj-H8C">
-                                        <rect key="frame" x="22" y="191" width="176" height="30"/>
-                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <state key="normal" title="login"/>
-                                        <connections>
-                                            <action selector="Login:" destination="bUG-YX-OAQ" eventType="touchUpInside" id="Tqc-q5-ifD"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CH-H0-k8j">
+                                        <rect key="frame" x="24" y="237" width="173" height="19"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="smr-ao-wZj">
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="19"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-F0-ErH">
+                                                <rect key="frame" x="38" y="0.0" width="82" height="19"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="smr-ao-wZj" firstAttribute="top" secondItem="0CH-H0-k8j" secondAttribute="top" id="F1N-fz-9Xz"/>
+                                            <constraint firstAttribute="bottom" secondItem="dLj-F0-ErH" secondAttribute="bottom" id="HR1-DV-Jj5"/>
+                                            <constraint firstItem="smr-ao-wZj" firstAttribute="leading" secondItem="0CH-H0-k8j" secondAttribute="leading" id="WXj-dp-4m7"/>
+                                            <constraint firstItem="dLj-F0-ErH" firstAttribute="top" secondItem="0CH-H0-k8j" secondAttribute="top" id="hEe-WI-f7u"/>
+                                            <constraint firstAttribute="bottom" secondItem="smr-ao-wZj" secondAttribute="bottom" id="mPS-Rr-GTb"/>
+                                            <constraint firstItem="dLj-F0-ErH" firstAttribute="leading" secondItem="smr-ao-wZj" secondAttribute="trailing" constant="16" id="sDN-de-PUd"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vNL-Gj-H8C" secondAttribute="trailing" constant="22" id="06i-CP-yda"/>
+                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="24" id="4ct-oZ-kA0"/>
                                     <constraint firstItem="c70-eM-nnq" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="20" id="6lU-GN-zsS"/>
-                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="22" id="7F5-eu-33V"/>
-                                    <constraint firstItem="c70-eM-nnq" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" id="7f7-2V-Qhw"/>
-                                    <constraint firstAttribute="bottom" secondItem="tVv-1a-Bgs" secondAttribute="bottom" constant="29" id="AoZ-8d-daC"/>
-                                    <constraint firstItem="VPa-7R-Be1" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" id="Br1-Ap-7ib"/>
+                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0361446" id="6mS-Pq-4wF"/>
+                                    <constraint firstItem="c70-eM-nnq" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" constant="-3.6360267999999998" id="7f7-2V-Qhw"/>
+                                    <constraint firstItem="VPa-7R-Be1" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" constant="-3.6360267999999998" id="Br1-Ap-7ib"/>
                                     <constraint firstItem="EpT-VH-sgv" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="22" id="G4F-s6-1SB"/>
-                                    <constraint firstAttribute="trailing" secondItem="tVv-1a-Bgs" secondAttribute="trailing" constant="21" id="GwG-zq-qiO"/>
-                                    <constraint firstItem="vNL-Gj-H8C" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.106007" id="Iql-yI-0Jy"/>
-                                    <constraint firstItem="fwf-16-7Sx" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" id="KJi-PG-fiR"/>
+                                    <constraint firstItem="vNL-Gj-H8C" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.106007" constant="-5.1943240000000017" id="Iql-yI-0Jy"/>
+                                    <constraint firstItem="fwf-16-7Sx" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" constant="-5.886811999999999" id="KJi-PG-fiR"/>
+                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="24" id="LJu-qO-Rqm"/>
                                     <constraint firstItem="fwf-16-7Sx" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="23" id="MpO-3F-pd4"/>
                                     <constraint firstItem="vNL-Gj-H8C" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="22" id="NtU-as-A4u"/>
                                     <constraint firstAttribute="trailing" secondItem="VPa-7R-Be1" secondAttribute="trailing" constant="23" id="Nxt-Ls-Zrf"/>
                                     <constraint firstItem="VPa-7R-Be1" firstAttribute="top" secondItem="9fU-jS-Fpn" secondAttribute="top" constant="33" id="OgI-t3-j2P"/>
                                     <constraint firstItem="EpT-VH-sgv" firstAttribute="top" secondItem="c70-eM-nnq" secondAttribute="bottom" constant="8" id="QxH-1J-Ppd"/>
-                                    <constraint firstItem="EpT-VH-sgv" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" id="XXO-qK-n3a"/>
+                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="top" secondItem="vNL-Gj-H8C" secondAttribute="bottom" constant="16" id="UCI-On-wRb"/>
+                                    <constraint firstItem="EpT-VH-sgv" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" constant="-5.886811999999999" id="XXO-qK-n3a"/>
                                     <constraint firstAttribute="trailing" secondItem="EpT-VH-sgv" secondAttribute="trailing" constant="23" id="bO5-b7-iK6"/>
                                     <constraint firstItem="VPa-7R-Be1" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="24" id="dC2-ab-Qfu"/>
+                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="top" secondItem="0CH-H0-k8j" secondAttribute="bottom" constant="11" id="f00-95-cpg"/>
                                     <constraint firstItem="fwf-16-7Sx" firstAttribute="top" secondItem="VPa-7R-Be1" secondAttribute="bottom" constant="8" id="fyz-2Q-0Bj"/>
                                     <constraint firstItem="vNL-Gj-H8C" firstAttribute="top" secondItem="EpT-VH-sgv" secondAttribute="bottom" constant="19" id="hfD-mO-QSU"/>
+                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="width" secondItem="9fU-jS-Fpn" secondAttribute="width" multiplier="0.804545" id="hgm-zk-jEm"/>
+                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="width" secondItem="9fU-jS-Fpn" secondAttribute="width" multiplier="0.786364" id="iLZ-Jp-HTD"/>
                                     <constraint firstItem="c70-eM-nnq" firstAttribute="top" secondItem="fwf-16-7Sx" secondAttribute="bottom" constant="13" id="iTF-CQ-CeK"/>
                                     <constraint firstAttribute="trailing" secondItem="c70-eM-nnq" secondAttribute="trailing" constant="19" id="lgO-Jj-ta7"/>
-                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="top" secondItem="vNL-Gj-H8C" secondAttribute="bottom" constant="21" id="shO-yN-Dj3"/>
-                                    <constraint firstItem="tVv-1a-Bgs" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0424028" id="ttV-5Q-GHH"/>
+                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0572289" id="ovK-uj-e3l"/>
+                                    <constraint firstAttribute="trailing" secondItem="tVv-1a-Bgs" secondAttribute="trailing" constant="19" id="tw6-3q-OCK"/>
                                     <constraint firstAttribute="trailing" secondItem="fwf-16-7Sx" secondAttribute="trailing" constant="23" id="xVK-cx-c5W"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -462,9 +489,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9fU-jS-Fpn" secondAttribute="trailing" constant="34" id="0NB-Rw-gIS"/>
-                            <constraint firstItem="9fU-jS-Fpn" firstAttribute="height" secondItem="JmI-dN-EL2" secondAttribute="height" multiplier="0.4" constant="117.39999999999998" id="3y7-bv-LJ0"/>
+                            <constraint firstItem="9fU-jS-Fpn" firstAttribute="height" secondItem="JmI-dN-EL2" secondAttribute="height" multiplier="0.4" constant="166.39999999999998" id="3y7-bv-LJ0"/>
                             <constraint firstItem="196-bl-Qiq" firstAttribute="leading" secondItem="JmI-dN-EL2" secondAttribute="leading" id="4v3-vK-bD5"/>
-                            <constraint firstItem="9fU-jS-Fpn" firstAttribute="centerY" secondItem="GwB-fX-m3T" secondAttribute="centerY" id="758-WT-uPC"/>
+                            <constraint firstItem="9fU-jS-Fpn" firstAttribute="centerY" secondItem="GwB-fX-m3T" secondAttribute="centerY" constant="24.5" id="758-WT-uPC"/>
                             <constraint firstAttribute="trailing" secondItem="196-bl-Qiq" secondAttribute="trailing" id="7fV-GC-UkM"/>
                             <constraint firstItem="9fU-jS-Fpn" firstAttribute="width" secondItem="JmI-dN-EL2" secondAttribute="width" multiplier="0.245536" id="BMP-0W-LBG"/>
                             <constraint firstAttribute="bottom" secondItem="196-bl-Qiq" secondAttribute="bottom" id="TsL-Bl-CXb"/>
@@ -527,11 +554,6 @@
                                             <action selector="signupButton:" destination="2Dx-7n-dFZ" eventType="touchUpInside" id="FUB-bG-AvH"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQ9-cn-sli">
-                                        <rect key="frame" x="63" y="229" width="77" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
@@ -1008,9 +1030,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hp8-cn-BuQ"/>
+        <segue reference="a03-Je-cCb"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="GoogleLogo" width="22" height="22"/>
         <image name="Idle1" width="416" height="454"/>
         <image name="Level page" width="4083" height="349"/>
         <image name="Settings" width="107" height="64"/>
