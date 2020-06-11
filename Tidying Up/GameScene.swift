@@ -8,34 +8,48 @@
 
 import SpriteKit
 import GameplayKit
+import Foundation
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
 //      load the player in the gamescene.sks
     var player = SKSpriteNode()
 //      array that will hold the different type of animation
-    var idlearray = [SKTexture]()
-    var runningarray = [SKTexture()];
     var joystickactive = false
     var xJoystickDelta = CGFloat();
     var yJoystickDelta = CGFloat();
      var joystick = SKSpriteNode(imageNamed: "joystick");
     var base = SKSpriteNode(imageNamed: "base");
-    var kitchen = SKSpriteNode()
-    var clothes = SKSpriteNode()
     var Cam = SKCameraNode()
     var actionbutton = SKSpriteNode(imageNamed: "joystick")
     var actionlabel = SKLabelNode(text: "test")
     var actionbuttonClicked = false
-    var bag = [SKSpriteNode()]
+    var idlearray = [SKTexture]()
+    var runningarray = [SKTexture()];
+    var bag = [item]()
+    var gameplayStart = false
+    var TimeLabelNode = SKLabelNode()
+    var CounterTimer = Timer()
+    var CounterStartTime = 90
+    var Gameover = false
+    var kitchen = SKSpriteNode()
+    var clothes = SKSpriteNode()
+    var baconBurger = SKSpriteNode()
+    
 //    enum playerstatus {
 //        case idle,running,die
 //    }
     struct Category_mask {
-        let player = 1
-        let pickableitem = 2
-        let furniture = 4
-        let enemy = 8
+        static let player = 0x1 << 0 // 1
+        static let food = 0x1 << 1 // 2
+        let fridge =  0x1 << 2 // 4
+        let dishes =  0x1 << 3 // 8
+        let sink =  0x1 << 4 // 16
+        let wardrobe = 0x1 << 5 // 32
+        let bed = 0x1 << 6  //64
+        let book = 0x1 << 7 //128
+        let broom = 0x1 << 8 //256
+        let clothes = 0x1 << 9 //512
     }
     struct Contact_mask {
         let player = 1
@@ -47,7 +61,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
 
     override func didMove(to view: SKView) {
-        
         self.scaleMode = .fill
         self.physicsWorld.contactDelegate = self
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -55,23 +68,81 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         border.restitution = 1.0
         self.physicsBody = border
         player = self.childNode(withName: "player") as! SKSpriteNode;
-
         InitializeItems()
         InitializeFurniture()
         IntializeArray()
         IntializeCameraNChild()
+        CounterTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(DecrementCounter), userInfo: nil, repeats: true)
+        
         
  
     }
+    //decrement the counter as the game starts
+    @objc func DecrementCounter() {
+       
+        if CounterStartTime <= 1 {
+            Gameover = true
+            GameOverReturnToLevelSelection()
+        }
+        CounterStartTime -= 1
+//        TimeLabelNode.text = "\(CounterStartTime)"
+        
+        let minutes = CounterStartTime/60
+        let  seconds = CounterStartTime % 60  //get remainder
+        TimeLabelNode.text = "\(minutes):\(seconds)"
+    }
+    //go back to the level selection screen and show the if level or objective is complete
+    func GameOverReturnToLevelSelection() {
+        print("hello")
+    }
     //function called when a node contact another node
     func didBegin(_ contact: SKPhysicsContact) {
+        var firstbody: UInt32 = 0
+        var secondbody: UInt32 = 0
+        var firstbodynode = SKNode()
+        var secondbodynode = SKNode()
+        //let the player alwasy be firstbody
+        if(contact.bodyA.categoryBitMask == 1)
+        {
+            firstbody = contact.bodyA.categoryBitMask
+            firstbodynode = contact.bodyA.node!
+            secondbody = contact.bodyB.categoryBitMask
+            secondbodynode = contact.bodyB.node!
+        }
+        if(contact.bodyB.categoryBitMask == 1){
+            firstbody = contact.bodyB.categoryBitMask
+            firstbodynode = contact.bodyB.node!
+            secondbody = contact.bodyA.categoryBitMask
+            secondbodynode = contact.bodyA.node!
+        }
         
-        switch (Contact_mask) {
-        case contact.bodyA.:
-            <#code#>
-        default:
-            <#code#>
-        }(contact.Contact_mask)
+        if(actionbuttonClicked == true){
+            
+            if(firstbody == 1) // player hit something
+            {
+                let bitwise = firstbody | secondbody
+                switch bitwise   //check what that something is
+                {
+                case let bitwise where bitwise == 3:
+                    print("grab food")
+                    actionlabel.text = "pick up"
+                    let food = item(_name: secondbodynode.name!, _category_Bitmask: 2)
+                    bag.append(food)
+                    secondbodynode.removeFromParent()
+                case let bitwise where bitwise == 5:
+                    print("contact fridge")
+                    let bagcontainfood = bag.contains{$0.category_Bitmask == 2}
+                    if (bagcontainfood) {
+                        print("food succesfully put")
+                    }
+                case let bitwise where bitwise == 9:
+                    print("picked up dirty dishes")
+                default:
+                    print("something went wrong error")
+                }
+            
+            }
+        }
 //        if (actionbuttonClicked == true){
 //            actionlabel.text = "pick up"
 //            bag.append(clothes)
@@ -80,42 +151,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     func InitializeItems(){
         clothes = self.childNode(withName: "clothes") as! SKSpriteNode;
+        baconBurger = self.childNode(withName: "baconBurger") as! SKSpriteNode
     }
     func InitializeFurniture() {
         kitchen = self.childNode(withName: "kitchen") as! SKSpriteNode;
     }
     func IntializeArray() {
-        for i in 1..<10
+        for i in 1..<16
               {
-                  let textturename2 = "Run (\(i))"
-                  let textturename = "Idle (\(i))"
+                  let textturename2 = "CTRun (\(i))"
+                  let textturename = "CTIdle (\(i))"
                   idlearray.append(SKTexture(imageNamed: textturename))
                   runningarray.append(SKTexture(imageNamed: textturename2))
               }
     }
     //intialize the camera and all its children, the player controls
     func IntializeCameraNChild(){
+       
+        Cam = self.childNode(withName: "Cam") as! SKCameraNode
         self.camera = Cam
-        self.addChild(Cam)
         let zeroRange = SKRange(constantValue: 0)
         let playerconstraints = SKConstraint.distance(zeroRange, to: player)
         let levelconstraint = SKConstraint.positionY(SKRange(constantValue: 0))
         Cam.constraints = [playerconstraints,levelconstraint]
-        base.size = CGSize(width: 256.998, height: 246.421)
-        base.position = CGPoint(x: -484.908, y: -331.116)
-        base.alpha = 0.6
-        Cam.addChild(base)
-        joystick.position = CGPoint(x:-484.907 , y: -331.117)
-        joystick.size = CGSize(width: 160, height: 140)
-        joystick.alpha = 0.6
-        Cam.addChild(joystick)
-        actionbutton.position = CGPoint(x:484.907 , y: -331.117)
-        actionbutton.size = CGSize(width: 200, height: 180)
-        actionbutton.alpha = 0.6
-        Cam.addChild(actionbutton)
+        base = Cam.childNode(withName: "base") as! SKSpriteNode
+        joystick = Cam.childNode(withName: "joystick") as! SKSpriteNode
+        actionbutton = Cam.childNode(withName: "actionButton") as! SKSpriteNode
+        TimeLabelNode = Cam.childNode(withName: "timerNode") as! SKLabelNode
         actionbutton.addChild(actionlabel)
         actionlabel.fontSize = 56
-        actionlabel.position = CGPoint(x:0 , y: -14.372)
+        actionlabel.position = CGPoint(x:0 , y: 0)
+        actionlabel.text = "A"
+        actionlabel.fontColor = UIColor.white
+        actionlabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
+        actionlabel.fontName = "HelveticaNeue-Bold"
+
         
     }
     
@@ -133,31 +203,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             else {joystickactive = false}
         }
         
-
-//        for touch in touches {
-//                  let location = touch.location(in: self)
-//                  player.removeAction(forKey: "Idle")
-////            player = SKSpriteNode(imageNamed: "Run \(1)")
-//                  player.run(SKAction.group([SKAction.repeatForever(SKAction.animate(with: runningarray, timePerFrame: 0.1, resize: false, restore: false)),SKAction.move(to: location, duration: 2)]), withKey: "Running")
-//
-//
-//              }
-        
         
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
     {
-//        for touch in touches
-//        {
-//            let location = touch.location(in: self)
-//            let vector = CGVector(dx: location.x - base.position.x, dy: location.y - base.position.y)
-//            let angle = atan2(vector.dy, vector.dx)
-//            let length = base.frame.size.height/2
-//            let XDistance = sin(angle - 1.5) * length
-//            let YDistance = cos(angle - 1.5) * length
-//
-//            joystick.position
-//        }
+
         for touch in touches
         {
             if(joystickactive == true)
@@ -188,19 +238,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
        
-        
-//        for touch in touches {
-//            let location = touch.location(in: self)
-//            player.removeAllActions()
-//            player.run(SKAction.group([SKAction.repeatForever(SKAction.animate(with: runningarray, timePerFrame: 0.1, resize: false, restore: false)),SKAction.move(to: location, duration: 2)]), withKey: "Running")
-//
-//
-//        }
-//
-//        player.removeAction(forKey: "Running")
-//        player.run(SKAction.repeatForever(SKAction.animate(with: idlearray, timePerFrame: 0.1, resize: false, restore: false)), withKey: "Idle")
-//
-
         if (joystickactive == true)
         {
             let move:SKAction = SKAction.move(to: base.position, duration: 0.2)
@@ -215,20 +252,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     override func update(_ currentTime: TimeInterval) {
-//            Cam.position = player.position
-//        player.
-        
-//        switch (currentstatus) {
-//        case .idle:
-//            player.run(SKAction.animate(with: idlearray, timePerFrame: 0.1, resize: false, restore: false))
-//            print("idle")
-//        case .running:
-//            player.run(SKAction.animate(with: runningarray, timePerFrame: 0.1, resize: false, restore: false), withKey: "running")
-//            print("running")
-//        case .die:
-//            print("die")
-//        }
-        
         
         if(joystickactive == true)
         {

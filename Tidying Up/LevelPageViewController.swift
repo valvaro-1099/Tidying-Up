@@ -20,11 +20,15 @@ class LevelPageViewController: UIViewController {
     
    
     @IBAction func LevelSelection(_ sender: UIButton) {
-        
+        let _senderName =  sender.titleLabel!.text
+        switch _senderName {
+        case :
+            <#code#>
+        default:
+            <#code#>
+        }
     }
-    @IBAction func LevelSelection2(_ sender: UIImageView) {
-        
-    }
+
     
    
 }
