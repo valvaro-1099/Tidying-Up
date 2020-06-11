@@ -33,7 +33,7 @@ class TutorialViewController: UIViewController {
             
         }
     }
-
+//test
 
     override var shouldAutorotate: Bool {
         return true
