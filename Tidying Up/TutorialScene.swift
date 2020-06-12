@@ -20,16 +20,6 @@ func shaderWithFilename( _ filename: String?, fileExtension: String?, uniforms: 
 
 class TutorialScene: SKScene, SKPhysicsContactDelegate
 {
-    var comment = SKShapeNode()
-    var commentText1 = SKLabelNode()
-    var manager = SKSpriteNode()
-    var manager2 = SKSpriteNode()
-    var comment2 = SKShapeNode()
-    var commentText2 = SKLabelNode()
-  
-    var manager3 = SKSpriteNode()
-    var comment4 = SKShapeNode()
-    var commentText4 = SKLabelNode()
     var player = SKSpriteNode()
     //      array that will hold the different type of animation
     var joystickactive = false
@@ -90,16 +80,20 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
     //setup the tutorial text for the player
     func setup() {
         //tutorial text 1
-        manager = self.childNode(withName: "manager") as! SKSpriteNode
+        let manager = self.childNode(withName: "manager") as! SKSpriteNode
         makecomment(manager: manager, text: "Welcome Username! Thank you for applying for this profession. Firstly before one becomes a professional cleaner one must go through some training. Lets get started shall we!")
         
         //tutorial text 2
-        manager2 = self.childNode(withName: "manager2") as! SKSpriteNode
+        let manager2 = self.childNode(withName: "manager2") as! SKSpriteNode
         makecomment(manager: manager2, text: "First lets start with the basicTo make a bed you have to press the A button continously while standing near the bed. Do this until the progress bar is completed")
         
         //tutorial text 3
-        manager3 = self.childNode(withName: "manager3") as! SKSpriteNode
+        let manager3 = self.childNode(withName: "manager3") as! SKSpriteNode
         makecomment(manager: manager3, text: "Now to pick up stuff press the A button. The item will be stored in your bag. You can check your bag by touching the player. After picking up the item put each item in there respectively places.")
+        
+        //tutorial text 4
+         let manager4 = self.childNode(withName: "manager4") as! SKSpriteNode
+        makecomment(manager: manager4, text: "Lastly lets try to dodge the enemy and make it pass the red line")
 
         //setup the process bar for the bed
         strokeLengthKey = "u_current_percentage"
@@ -148,7 +142,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
         commentText.color = UIColor.white
         commentText.fontName = "HelveticaNeue"
         commentText.fontSize = 50
-        commentText.text = "Now put the things where they belong. Put the food in the fridge, put the clothes in the wardrobe, put the dishes in the sink, put the books in the bookshelf"
+        commentText.text = text
         self.addChild(comment)
     }
     //intialize the camera and all its children, the player controls
@@ -274,38 +268,47 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
             if(itemlabel1.text == "")
             {
                 itemlabel1.text  = _itemname
+                return
             }
             if(itemlabel2.text == "")
             {
                 itemlabel2.text  = _itemname
+                return
             }
             if(itemlabel3.text == "")
             {
                 itemlabel3.text  = _itemname
+                return
             }
             if(itemlabel4.text == "")
             {
                 itemlabel4.text  = _itemname
+                return
             }
             if(itemlabel5.text == "")
             {
                 itemlabel5.text  = _itemname
+                return
             }
             if(itemlabel6.text == "")
             {
                 itemlabel6.text  = _itemname
+                return
             }
             if(itemlabel7.text == "")
             {
                 itemlabel7.text  = _itemname
+                return
             }
             if(itemlabel8.text == "")
             {
                 itemlabel8.text  = _itemname
+                return
             }
             if(itemlabel9.text == "")
             {
                 itemlabel9.text  = _itemname
+                return
             }
             
         }
