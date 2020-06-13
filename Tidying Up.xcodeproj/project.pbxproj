@@ -18,6 +18,32 @@
 		385DC9FF2492287700EE1AF9 /* animateStroke.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 385DC9FE2492287700EE1AF9 /* animateStroke.fsh */; };
 		385DCA052492B73500EE1AF9 /* LevelInsideViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DCA042492B73500EE1AF9 /* LevelInsideViewContoller.swift */; };
 		385DCA072492CE0000EE1AF9 /* linkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DCA062492CE0000EE1AF9 /* linkedList.swift */; };
+		3869D9B92494C9B20018B021 /* BackgroundSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3869D9B82494C9B20018B021 /* BackgroundSound.mp3 */; };
+		3869D9BB2494CC060018B021 /* CompleteSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3869D9BA2494CC060018B021 /* CompleteSound.mp3 */; };
+		386C6FBC2493F8C800363E1D /* Level1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FBB2493F8C800363E1D /* Level1.sks */; };
+		386C6FC0249415BE00363E1D /* GameScene2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C6FBF249415BE00363E1D /* GameScene2.swift */; };
+		386C6FC42494199200363E1D /* Bitmask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386C6FC32494199200363E1D /* Bitmask.swift */; };
+		386C6FCA24949A6800363E1D /* Level2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FC924949A6800363E1D /* Level2.sks */; };
+		386C6FCC2494A69F00363E1D /* Level3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FCB2494A69F00363E1D /* Level3.sks */; };
+		386C6FCE2494A6AC00363E1D /* Level4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FCD2494A6AC00363E1D /* Level4.sks */; };
+		386C6FD22494A6D300363E1D /* Level5.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FD12494A6D300363E1D /* Level5.sks */; };
+		386C6FD42494A6E200363E1D /* Level6.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FD32494A6E200363E1D /* Level6.sks */; };
+		386C6FD62494A6ED00363E1D /* Level7.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FD52494A6ED00363E1D /* Level7.sks */; };
+		386C6FD82494A6F800363E1D /* Level8.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FD72494A6F800363E1D /* Level8.sks */; };
+		386C6FDA2494A70400363E1D /* Level9.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FD92494A70400363E1D /* Level9.sks */; };
+		386C6FDC2494A70D00363E1D /* Level10.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FDB2494A70D00363E1D /* Level10.sks */; };
+		386C6FDE2494A71900363E1D /* Level11.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FDD2494A71900363E1D /* Level11.sks */; };
+		386C6FE02494A72500363E1D /* Level12.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FDF2494A72500363E1D /* Level12.sks */; };
+		386C6FE22494A74D00363E1D /* Level13.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FE12494A74D00363E1D /* Level13.sks */; };
+		386C6FE42494A75500363E1D /* Level14.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FE32494A75500363E1D /* Level14.sks */; };
+		386C6FE62494A76000363E1D /* Level15.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FE52494A76000363E1D /* Level15.sks */; };
+		386C6FE82494A76C00363E1D /* Level16.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FE72494A76C00363E1D /* Level16.sks */; };
+		386C6FEA2494A77500363E1D /* Level17.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FE92494A77500363E1D /* Level17.sks */; };
+		386C6FEC2494A78000363E1D /* Level18.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FEB2494A78000363E1D /* Level18.sks */; };
+		386C6FEE2494A78B00363E1D /* Level19.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FED2494A78B00363E1D /* Level19.sks */; };
+		386C6FF02494A79300363E1D /* Level20.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FEF2494A79300363E1D /* Level20.sks */; };
+		386C6FF22494A7A200363E1D /* Level21.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FF12494A7A200363E1D /* Level21.sks */; };
+		386C6FF42494A7AA00363E1D /* Level22.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386C6FF32494A7AA00363E1D /* Level22.sks */; };
 		3887045F248DF787009B13C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3887045E248DF787009B13C7 /* GoogleService-Info.plist */; };
 		38870461248DF796009B13C7 /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38870460248DF796009B13C7 /* credentials.plist */; };
 		3887046724901D55009B13C7 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3887046624901D55009B13C7 /* Level.swift */; };
@@ -69,6 +95,32 @@
 		385DC9FE2492287700EE1AF9 /* animateStroke.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = animateStroke.fsh; sourceTree = "<group>"; };
 		385DCA042492B73500EE1AF9 /* LevelInsideViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelInsideViewContoller.swift; sourceTree = "<group>"; };
 		385DCA062492CE0000EE1AF9 /* linkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkedList.swift; sourceTree = "<group>"; };
+		3869D9B82494C9B20018B021 /* BackgroundSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackgroundSound.mp3; sourceTree = "<group>"; };
+		3869D9BA2494CC060018B021 /* CompleteSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CompleteSound.mp3; sourceTree = "<group>"; };
+		386C6FBB2493F8C800363E1D /* Level1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1.sks; sourceTree = "<group>"; };
+		386C6FBF249415BE00363E1D /* GameScene2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene2.swift; sourceTree = "<group>"; };
+		386C6FC32494199200363E1D /* Bitmask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitmask.swift; sourceTree = "<group>"; };
+		386C6FC924949A6800363E1D /* Level2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level2.sks; sourceTree = "<group>"; };
+		386C6FCB2494A69F00363E1D /* Level3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level3.sks; sourceTree = "<group>"; };
+		386C6FCD2494A6AC00363E1D /* Level4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level4.sks; sourceTree = "<group>"; };
+		386C6FD12494A6D300363E1D /* Level5.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level5.sks; sourceTree = "<group>"; };
+		386C6FD32494A6E200363E1D /* Level6.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level6.sks; sourceTree = "<group>"; };
+		386C6FD52494A6ED00363E1D /* Level7.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level7.sks; sourceTree = "<group>"; };
+		386C6FD72494A6F800363E1D /* Level8.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level8.sks; sourceTree = "<group>"; };
+		386C6FD92494A70400363E1D /* Level9.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level9.sks; sourceTree = "<group>"; };
+		386C6FDB2494A70D00363E1D /* Level10.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level10.sks; sourceTree = "<group>"; };
+		386C6FDD2494A71900363E1D /* Level11.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level11.sks; sourceTree = "<group>"; };
+		386C6FDF2494A72500363E1D /* Level12.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level12.sks; sourceTree = "<group>"; };
+		386C6FE12494A74D00363E1D /* Level13.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level13.sks; sourceTree = "<group>"; };
+		386C6FE32494A75500363E1D /* Level14.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level14.sks; sourceTree = "<group>"; };
+		386C6FE52494A76000363E1D /* Level15.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level15.sks; sourceTree = "<group>"; };
+		386C6FE72494A76C00363E1D /* Level16.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level16.sks; sourceTree = "<group>"; };
+		386C6FE92494A77500363E1D /* Level17.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level17.sks; sourceTree = "<group>"; };
+		386C6FEB2494A78000363E1D /* Level18.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level18.sks; sourceTree = "<group>"; };
+		386C6FED2494A78B00363E1D /* Level19.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level19.sks; sourceTree = "<group>"; };
+		386C6FEF2494A79300363E1D /* Level20.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level20.sks; sourceTree = "<group>"; };
+		386C6FF12494A7A200363E1D /* Level21.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level21.sks; sourceTree = "<group>"; };
+		386C6FF32494A7AA00363E1D /* Level22.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level22.sks; sourceTree = "<group>"; };
 		3887045E248DF787009B13C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38870460248DF796009B13C7 /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		3887046624901D55009B13C7 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
@@ -150,9 +202,48 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		386C6FB72493F02F00363E1D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		386C6FBA2493F89F00363E1D /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				3887046A2490C370009B13C7 /* FloorTile.sks */,
+				386C6FBB2493F8C800363E1D /* Level1.sks */,
+				386C6FC924949A6800363E1D /* Level2.sks */,
+				386C6FCB2494A69F00363E1D /* Level3.sks */,
+				386C6FCD2494A6AC00363E1D /* Level4.sks */,
+				386C6FD12494A6D300363E1D /* Level5.sks */,
+				386C6FD32494A6E200363E1D /* Level6.sks */,
+				386C6FD52494A6ED00363E1D /* Level7.sks */,
+				386C6FD72494A6F800363E1D /* Level8.sks */,
+				386C6FD92494A70400363E1D /* Level9.sks */,
+				386C6FDB2494A70D00363E1D /* Level10.sks */,
+				386C6FDD2494A71900363E1D /* Level11.sks */,
+				386C6FDF2494A72500363E1D /* Level12.sks */,
+				386C6FE12494A74D00363E1D /* Level13.sks */,
+				386C6FE32494A75500363E1D /* Level14.sks */,
+				386C6FE52494A76000363E1D /* Level15.sks */,
+				386C6FE72494A76C00363E1D /* Level16.sks */,
+				386C6FE92494A77500363E1D /* Level17.sks */,
+				386C6FEB2494A78000363E1D /* Level18.sks */,
+				386C6FED2494A78B00363E1D /* Level19.sks */,
+				386C6FEF2494A79300363E1D /* Level20.sks */,
+				386C6FF12494A7A200363E1D /* Level21.sks */,
+				386C6FF32494A7AA00363E1D /* Level22.sks */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
 		38A8F1B324683C6F00C57CB6 = {
 			isa = PBXGroup;
 			children = (
+				386C6FBA2493F89F00363E1D /* Level */,
+				386C6FB72493F02F00363E1D /* ViewController */,
 				38A8F1BE24683C6F00C57CB6 /* Tidying Up */,
 				38A8F1E424683C7000C57CB6 /* Tidying UpUITests */,
 				38A8F1BD24683C6F00C57CB6 /* Products */,
@@ -174,12 +265,13 @@
 		38A8F1BE24683C6F00C57CB6 /* Tidying Up */ = {
 			isa = PBXGroup;
 			children = (
+				3869D9BA2494CC060018B021 /* CompleteSound.mp3 */,
+				3869D9B82494C9B20018B021 /* BackgroundSound.mp3 */,
 				38A8F1BF24683C6F00C57CB6 /* AppDelegate.swift */,
 				382397B12491198C0094664B /* Tutorial.sks */,
 				3853F0B524911CD8000F9BF7 /* TutorialScene.swift */,
 				38A8F1C124683C6F00C57CB6 /* GameScene.sks */,
-				38A8F1C524683C6F00C57CB6 /* GameScene.swift */,
-				3887046A2490C370009B13C7 /* FloorTile.sks */,
+				386C6FBF249415BE00363E1D /* GameScene2.swift */,
 				38A8F1C324683C6F00C57CB6 /* Actions.sks */,
 				382397AF2490E7640094664B /* item.swift */,
 				38A8F1C724683C6F00C57CB6 /* GameViewController.swift */,
@@ -200,6 +292,8 @@
 				38A8F1D924683C7000C57CB6 /* Tidying UpTests */,
 				385DC9FE2492287700EE1AF9 /* animateStroke.fsh */,
 				385DCA062492CE0000EE1AF9 /* linkedList.swift */,
+				386C6FC32494199200363E1D /* Bitmask.swift */,
+				38A8F1C524683C6F00C57CB6 /* GameScene.swift */,
 			);
 			path = "Tidying Up";
 			sourceTree = "<group>";
@@ -340,15 +434,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				38A8F1CB24683C6F00C57CB6 /* Main.storyboard in Resources */,
+				386C6FD82494A6F800363E1D /* Level8.sks in Resources */,
+				386C6FE22494A74D00363E1D /* Level13.sks in Resources */,
+				386C6FE82494A76C00363E1D /* Level16.sks in Resources */,
 				385DC9FF2492287700EE1AF9 /* animateStroke.fsh in Resources */,
+				3869D9BB2494CC060018B021 /* CompleteSound.mp3 in Resources */,
 				38A8F1C224683C6F00C57CB6 /* GameScene.sks in Resources */,
+				386C6FF42494A7AA00363E1D /* Level22.sks in Resources */,
+				386C6FCE2494A6AC00363E1D /* Level4.sks in Resources */,
+				386C6FD22494A6D300363E1D /* Level5.sks in Resources */,
 				38A8F1CD24683C7000C57CB6 /* Assets.xcassets in Resources */,
+				386C6FDA2494A70400363E1D /* Level9.sks in Resources */,
 				382397B22491198C0094664B /* Tutorial.sks in Resources */,
+				386C6FEE2494A78B00363E1D /* Level19.sks in Resources */,
+				386C6FF22494A7A200363E1D /* Level21.sks in Resources */,
+				386C6FF02494A79300363E1D /* Level20.sks in Resources */,
+				386C6FD42494A6E200363E1D /* Level6.sks in Resources */,
 				3887045F248DF787009B13C7 /* GoogleService-Info.plist in Resources */,
 				3887046B2490C370009B13C7 /* FloorTile.sks in Resources */,
+				386C6FCA24949A6800363E1D /* Level2.sks in Resources */,
+				3869D9B92494C9B20018B021 /* BackgroundSound.mp3 in Resources */,
+				386C6FEC2494A78000363E1D /* Level18.sks in Resources */,
+				386C6FEA2494A77500363E1D /* Level17.sks in Resources */,
 				38A8F1D024683C7000C57CB6 /* LaunchScreen.storyboard in Resources */,
+				386C6FE42494A75500363E1D /* Level14.sks in Resources */,
 				38870461248DF796009B13C7 /* credentials.plist in Resources */,
+				386C6FE02494A72500363E1D /* Level12.sks in Resources */,
+				386C6FDE2494A71900363E1D /* Level11.sks in Resources */,
+				386C6FE62494A76000363E1D /* Level15.sks in Resources */,
+				386C6FD62494A6ED00363E1D /* Level7.sks in Resources */,
+				386C6FBC2493F8C800363E1D /* Level1.sks in Resources */,
+				386C6FCC2494A69F00363E1D /* Level3.sks in Resources */,
 				38A8F1C424683C6F00C57CB6 /* Actions.sks in Resources */,
+				386C6FDC2494A70D00363E1D /* Level10.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +631,8 @@
 				3850D302247DCC03000E939C /* LevelPageViewController.swift in Sources */,
 				38A8F1C624683C6F00C57CB6 /* GameScene.swift in Sources */,
 				382397B02490E7640094664B /* item.swift in Sources */,
+				386C6FC42494199200363E1D /* Bitmask.swift in Sources */,
+				386C6FC0249415BE00363E1D /* GameScene2.swift in Sources */,
 				38FA7B7724779FFD0010DC6A /* LoginpageViewController.swift in Sources */,
 				3853F0B624911CD8000F9BF7 /* TutorialScene.swift in Sources */,
 				38E6DE502478D7E80015A980 /* SignUpViewcontroller.swift in Sources */,

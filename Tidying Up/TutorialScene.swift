@@ -10,6 +10,8 @@ import Foundation
 import SpriteKit
 import GameplayKit
 import UIKit
+import AVKit
+
 //create a new custom shader object
 func shaderWithFilename( _ filename: String?, fileExtension: String?, uniforms: [SKUniform] ) -> SKShader {
         let path = Bundle.main.path( forResource: filename, ofType: fileExtension )
@@ -63,7 +65,16 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
     var itemlabel7 = SKLabelNode()
     var itemlabel8 = SKLabelNode()
     var itemlabel9 = SKLabelNode()
-    
+    var finish = SKSpriteNode()
+    var zombie = SKSpriteNode()
+    var zombie2 = SKSpriteNode()
+    var zombieAttackArray = [SKTexture]()
+    var DeadArray = [SKTexture]()
+    var completeSound = SKAction()
+    var gameoverlabel = SKLabelNode()
+//    var backgroundmusic = NSURL(fileURLWithPath: Bundle.main.path(forResource: "backgroundSound", ofType: "mp3")!)
+//    var audioplayer = AVAudioPlayer()
+//
     override func didMove(to view: SKView) {
         self.scaleMode = .aspectFill
         self.physicsWorld.contactDelegate = self
@@ -71,11 +82,36 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
         border.friction = 0.0
         border.restitution = 1.0
         self.physicsBody = border
-         player = self.childNode(withName: "player") as! SKSpriteNode;
+        setupplayer()
         IntializeCameraNChild()
         IntializeArray()
         setup()
-    
+        finish = self.childNode(withName: "finish") as! SKSpriteNode
+        setupenemy()
+        setupSound()
+    }
+    func setupplayer() {
+        player = self.childNode(withName: "player") as! SKSpriteNode;
+        player.addChild(gameoverlabel)
+        gameoverlabel.text = "Game Over"
+        gameoverlabel.fontSize = 200
+        gameoverlabel.position = CGPoint(x: 0, y: 0)
+        gameoverlabel.isHidden = true
+    }
+    func setupSound(){
+        let backgroundmusic = SKAction.playSoundFileNamed("BackgroundSound.mp3", waitForCompletion: false)
+        completeSound = SKAction.playSoundFileNamed("CompleteSound", waitForCompletion: false)
+        self.run(backgroundmusic, withKey: "backgroundMusic")
+        
+    }
+    func setupenemy() {
+        zombie = self.childNode(withName: "zombie") as! SKSpriteNode
+        zombie2 = self.childNode(withName: "zombie2") as! SKSpriteNode
+        let zombie1updirection = SKAction.group([SKAction.moveTo(y: 382.695, duration: 4),SKAction.animate(with: zombieAttackArray, timePerFrame: 0.1)])
+        let zombiedowndirection = SKAction.group([SKAction.moveTo(y: -382.695, duration: 4),SKAction.animate(with: zombieAttackArray, timePerFrame: 0.1)])
+        zombie.run(SKAction.repeatForever( SKAction.sequence([zombie1updirection,zombiedowndirection])))
+        zombie2.run(SKAction.repeatForever( SKAction.sequence([zombiedowndirection,zombie1updirection])))
+        //382.695
     }
     //setup the tutorial text for the player
     func setup() {
@@ -93,7 +129,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
         
         //tutorial text 4
          let manager4 = self.childNode(withName: "manager4") as! SKSpriteNode
-        makecomment(manager: manager4, text: "Lastly lets try to dodge the enemy and make it pass the red line")
+        makecomment(manager: manager4, text: "Lastly lets try to dodge the enemy and make it pass the Finish line to completed the tutorial.Dont get hit or you'll be dead")
 
         //setup the process bar for the bed
         strokeLengthKey = "u_current_percentage"
@@ -165,6 +201,7 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
         actionlabel.verticalAlignmentMode = SKLabelVerticalAlignmentMode.center
         actionlabel.fontName = "HelveticaNeue-Bold"
     }
+    //load the array for animations
     func IntializeArray() {
         for i in 1..<16
               {
@@ -172,7 +209,16 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
                   let textturename = "CTIdle (\(i))"
                   idlearray.append(SKTexture(imageNamed: textturename))
                   runningarray.append(SKTexture(imageNamed: textturename2))
+                    
               }
+        for i in 1..<9{
+            let texturename = "zgAttack (\(i))"
+            zombieAttackArray.append(SKTexture(imageNamed: texturename))
+        }
+        for i in 1..<30 {
+            let textturename = "Dead (\(i))"
+            DeadArray.append(SKTexture(imageNamed: textturename))
+        }
     }
     func didBegin(_ contact: SKPhysicsContact) {
       
@@ -219,14 +265,15 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
                                         return
                                         }
                                     }
-                                        
                             case let bitwise where bitwise == 5: //fridge
                                 print("touch fridge")
+                                PutItem(_categorybitmask: 2)
                             case let bitwise where bitwise == 3: //food
                                 print("touch food")
                                 addbag(_itemname: secondbodynodeName!, _category: secondbody, _removenode: secondbodynode)
                             case let bitwise where bitwise == 17: // sink
                                 print("touch sink")
+                                PutItem(_categorybitmask: 8)
                             case let bitwise where bitwise == 9: // Dishes
                                 print("touch dishes")
                                 addbag(_itemname: secondbodynodeName!, _category: secondbody, _removenode: secondbodynode)
@@ -235,11 +282,23 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
                                 addbag(_itemname: secondbodynodeName!, _category: secondbody, _removenode: secondbodynode)
                             case let bitwise where bitwise == 33: // wardrobe
                             print("touche wardrobe")
+                                PutItem(_categorybitmask: 512)
                             case let bitwise where bitwise == 129: // book // not working
                                 print("touch book")
                                 addbag(_itemname: secondbodynodeName!, _category: secondbody, _removenode: secondbodynode)
-                            case let bitwise where bitwise == 1024: // bookshelf
+                            case let bitwise where bitwise == 1025: // bookshelf
                                 print("touche bookshelf")
+                                PutItem(_categorybitmask: 128)
+                            case let bitwise where bitwise == 2049:
+                                print("touch enemy")
+                                player.removeAllActions()
+                                player.run(SKAction.animate(with: DeadArray, timePerFrame: 0.1))
+                                gameoverlabel.isHidden = false
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                                    self.player.position = CGPoint(x: -4798.325, y: -58.656)
+                                    self.gameoverlabel.isHidden = true
+                                    self.player.run(SKAction.repeatForever(SKAction.animate(with: self.idlearray, timePerFrame: 0.1)))
+                                }
                             default:
                                 print("something went wrong")
                         }
@@ -249,6 +308,16 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
             
         }
         
+    }
+    //check in the bag if there a item with that category
+    func PutItem(_categorybitmask: Int){
+        if(bag.contains(where: {$0.category_Bitmask == _categorybitmask}))
+        {
+            print("it contain food")
+            self.run(completeSound)
+            bag.removeAll(where: {$0.category_Bitmask == 2})
+            removeitemFrombagShow()
+        }
     }
     //add the item into the bag
     func addbag(_itemname:String, _category:UInt32,_removenode: SKNode){
@@ -314,6 +383,54 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
         }
         
     }
+    func removeitemFrombagShow() {
+        if(itemlabel1.text != "")
+        {
+            itemlabel1.text  = ""
+            return
+        }
+        if(itemlabel2.text != "")
+        {
+            itemlabel2.text  = ""
+            return
+        }
+        if(itemlabel3.text != "")
+        {
+            itemlabel3.text  = ""
+            return
+        }
+        if(itemlabel4.text != "")
+        {
+            itemlabel4.text  = ""
+            return
+        }
+        if(itemlabel5.text != "")
+        {
+            itemlabel5.text  = ""
+            return
+        }
+        if(itemlabel6.text != "")
+        {
+            itemlabel6.text  = ""
+            return
+        }
+        if(itemlabel7.text != "")
+        {
+            itemlabel7.text  = ""
+            return
+        }
+        if(itemlabel8.text != "")
+        {
+            itemlabel8.text  = ""
+            return
+        }
+        if(itemlabel9.text != "")
+        {
+            itemlabel9.text  = ""
+            return
+        }
+        
+            }
     
    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 
@@ -409,6 +526,14 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
 
     override func update(_ currentTime: TimeInterval)
     {
+        if(finish.frame.contains(player.position)){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = mainStoryboard.instantiateViewController(withIdentifier: "LevelPageViewController")
+                self.view?.window?.rootViewController?.present(vc, animated: true, completion: nil)
+            }
+        
+        }
             
             if(joystickactive == true)
             {
@@ -420,5 +545,6 @@ class TutorialScene: SKScene, SKPhysicsContactDelegate
             self.player.position.x += xAdd
             self.player.position.y += yAdd
             }
+//        print("it did get
     }
 }

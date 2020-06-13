@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mFR-eF-Huz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bUG-YX-OAQ">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -85,6 +85,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="PlayLevel:" destination="zwk-jD-Vkv" eventType="touchUpInside" id="Nga-aI-QdI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -172,6 +175,13 @@
                                     <constraint firstAttribute="bottom" secondItem="5Ju-yt-4ef" secondAttribute="bottom" constant="20" id="oez-lE-lbX"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkc-ya-1ey">
+                                <rect key="frame" x="10" y="3" width="114" height="65"/>
+                                <state key="normal" backgroundImage="back"/>
+                                <connections>
+                                    <segue destination="0X0-Ta-OAo" kind="show" id="b0X-mb-mtw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -186,7 +196,11 @@
                             <constraint firstItem="6Y1-71-j61" firstAttribute="width" secondItem="aqG-KE-p0m" secondAttribute="width" multiplier="0.530134" id="TWf-kl-ToS"/>
                             <constraint firstItem="6Y1-71-j61" firstAttribute="top" secondItem="6ne-Fy-Xd6" secondAttribute="top" constant="46" id="Tl4-7k-wUA"/>
                             <constraint firstItem="HpO-i1-RPc" firstAttribute="width" secondItem="aqG-KE-p0m" secondAttribute="width" multiplier="0.241071" id="Ucz-VU-2wq"/>
+                            <constraint firstItem="wkc-ya-1ey" firstAttribute="width" secondItem="aqG-KE-p0m" secondAttribute="width" multiplier="0.127232" id="UqJ-o6-W49"/>
+                            <constraint firstItem="wkc-ya-1ey" firstAttribute="top" secondItem="6ne-Fy-Xd6" secondAttribute="top" constant="3" id="Vpx-zx-Hb8"/>
+                            <constraint firstItem="wkc-ya-1ey" firstAttribute="leading" secondItem="aqG-KE-p0m" secondAttribute="leading" constant="10" id="X6k-Za-d6Y"/>
                             <constraint firstAttribute="trailing" secondItem="2xZ-7a-FYG" secondAttribute="trailing" id="Yar-Zk-i08"/>
+                            <constraint firstItem="wkc-ya-1ey" firstAttribute="height" secondItem="aqG-KE-p0m" secondAttribute="height" multiplier="0.157005" id="Ym1-IA-cSA"/>
                             <constraint firstItem="6Y1-71-j61" firstAttribute="leading" secondItem="6ne-Fy-Xd6" secondAttribute="leading" constant="73" id="bZk-Io-0Df"/>
                             <constraint firstItem="5Ju-yt-4ef" firstAttribute="height" secondItem="aqG-KE-p0m" secondAttribute="height" multiplier="0.10628" id="hAY-V3-pFm"/>
                             <constraint firstItem="5Ju-yt-4ef" firstAttribute="width" secondItem="aqG-KE-p0m" secondAttribute="width" multiplier="0.046875" id="kEw-9l-yje"/>
@@ -198,12 +212,13 @@
                     <navigationItem key="navigationItem" id="d6r-fz-jJq"/>
                     <connections>
                         <outlet property="Character" destination="NJi-dA-1MV" id="cVJ-C6-fqm"/>
+                        <segue destination="BV1-FR-VrT" kind="show" identifier="ToGameScene" id="2pf-ez-sR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mct-Ne-74o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0V2-Q1-kbA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2043.0803571428571" y="2269.5652173913045"/>
+            <point key="canvasLocation" x="-2087" y="2516"/>
         </scene>
         <!--Shop-->
         <scene sceneID="cwL-5C-ZNP">
@@ -226,13 +241,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTu-Z7-PCN">
                                         <rect key="frame" x="0.0" y="-10" width="566.5" height="103"/>
                                         <state key="normal" backgroundImage="level"/>
+                                        <connections>
+                                            <segue destination="0X0-Ta-OAo" kind="show" id="1IC-Az-TYB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e1-HS-e9T" userLabel="Button3">
                                         <rect key="frame" x="0.0" y="176" width="566.5" height="103"/>
                                         <state key="normal" backgroundImage="Settings"/>
-                                        <connections>
-                                            <segue destination="i7t-Rm-iAa" kind="show" id="Hp8-cn-BuQ"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfb-Y9-Lya">
                                         <rect key="frame" x="0.0" y="269" width="566.5" height="103"/>
@@ -384,9 +399,25 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Eh-Xr-Aaj">
+                                <rect key="frame" x="25" y="0.0" width="114" height="65"/>
+                                <state key="normal" backgroundImage="back"/>
+                                <connections>
+                                    <segue destination="0X0-Ta-OAo" kind="show" id="Bw5-nI-ncE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Eh-Xr-Aaj" firstAttribute="width" secondItem="3se-qz-xqx" secondAttribute="width" multiplier="0.127232" id="DJh-Qi-wlF"/>
+                            <constraint firstItem="3Eh-Xr-Aaj" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leading" constant="25" id="ONO-vd-qM1"/>
+                            <constraint firstItem="3Eh-Xr-Aaj" firstAttribute="height" secondItem="3se-qz-xqx" secondAttribute="height" multiplier="0.157005" id="pcE-xW-gfe"/>
+                            <constraint firstItem="3Eh-Xr-Aaj" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="wnq-Yu-EBI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="h5Z-5P-hNp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,6 +433,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TrN-RO-ss8"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xCu-Mh-rqh"/>
+                    <connections>
+                        <segue destination="0X0-Ta-OAo" kind="show" identifier="" id="BCB-qk-kLU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hiY-9x-NbB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -449,47 +484,24 @@
                                         <state key="normal" title="login"/>
                                         <connections>
                                             <action selector="Login:" destination="bUG-YX-OAQ" eventType="touchUpInside" id="Tqc-q5-ifD"/>
+                                            <segue destination="mFR-eF-Huz" kind="show" id="hLg-Pr-hxO"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0CH-H0-k8j">
-                                        <rect key="frame" x="24" y="237" width="173" height="19"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="smr-ao-wZj">
-                                                <rect key="frame" x="0.0" y="0.0" width="22" height="19"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign with Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-F0-ErH">
-                                                <rect key="frame" x="38" y="0.0" width="82" height="19"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="smr-ao-wZj" firstAttribute="top" secondItem="0CH-H0-k8j" secondAttribute="top" id="F1N-fz-9Xz"/>
-                                            <constraint firstAttribute="bottom" secondItem="dLj-F0-ErH" secondAttribute="bottom" id="HR1-DV-Jj5"/>
-                                            <constraint firstItem="smr-ao-wZj" firstAttribute="leading" secondItem="0CH-H0-k8j" secondAttribute="leading" id="WXj-dp-4m7"/>
-                                            <constraint firstItem="dLj-F0-ErH" firstAttribute="top" secondItem="0CH-H0-k8j" secondAttribute="top" id="hEe-WI-f7u"/>
-                                            <constraint firstAttribute="bottom" secondItem="smr-ao-wZj" secondAttribute="bottom" id="mPS-Rr-GTb"/>
-                                            <constraint firstItem="dLj-F0-ErH" firstAttribute="leading" secondItem="smr-ao-wZj" secondAttribute="trailing" constant="16" id="sDN-de-PUd"/>
-                                        </constraints>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq9-76-QHP">
-                                        <rect key="frame" x="20" y="264" width="177" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lq9-76-QHP">
+                                        <rect key="frame" x="21" y="246" width="177" height="26.5"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Don't have an account? ">
                                                     <attributes>
                                                         <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" metaFont="system" size="12"/>
+                                                        <font key="NSFont" metaFont="label" size="12"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                                 <fragment content="Sign up here">
                                                     <attributes>
                                                         <color key="NSColor" name="linkColor" catalog="System" colorSpace="catalog"/>
-                                                        <font key="NSFont" metaFont="system" size="12"/>
+                                                        <font key="NSFont" metaFont="label" size="12"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -507,25 +519,24 @@
                                     <constraint firstItem="c70-eM-nnq" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="20" id="6lU-GN-zsS"/>
                                     <constraint firstItem="c70-eM-nnq" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" constant="-3.6360267999999998" id="7f7-2V-Qhw"/>
                                     <constraint firstItem="VPa-7R-Be1" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0742049" constant="-3.6360267999999998" id="Br1-Ap-7ib"/>
+                                    <constraint firstItem="lq9-76-QHP" firstAttribute="top" secondItem="vNL-Gj-H8C" secondAttribute="bottom" constant="25" id="DUN-sN-ER8"/>
                                     <constraint firstItem="EpT-VH-sgv" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="22" id="G4F-s6-1SB"/>
                                     <constraint firstItem="vNL-Gj-H8C" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.106007" constant="-5.1943240000000017" id="Iql-yI-0Jy"/>
                                     <constraint firstItem="fwf-16-7Sx" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" constant="-5.886811999999999" id="KJi-PG-fiR"/>
-                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="24" id="LJu-qO-Rqm"/>
                                     <constraint firstItem="fwf-16-7Sx" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="23" id="MpO-3F-pd4"/>
                                     <constraint firstItem="vNL-Gj-H8C" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="22" id="NtU-as-A4u"/>
                                     <constraint firstAttribute="trailing" secondItem="VPa-7R-Be1" secondAttribute="trailing" constant="23" id="Nxt-Ls-Zrf"/>
                                     <constraint firstItem="VPa-7R-Be1" firstAttribute="top" secondItem="9fU-jS-Fpn" secondAttribute="top" constant="33" id="OgI-t3-j2P"/>
                                     <constraint firstItem="EpT-VH-sgv" firstAttribute="top" secondItem="c70-eM-nnq" secondAttribute="bottom" constant="8" id="QxH-1J-Ppd"/>
-                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="top" secondItem="vNL-Gj-H8C" secondAttribute="bottom" constant="16" id="UCI-On-wRb"/>
                                     <constraint firstItem="EpT-VH-sgv" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.120141" constant="-5.886811999999999" id="XXO-qK-n3a"/>
+                                    <constraint firstAttribute="trailing" secondItem="lq9-76-QHP" secondAttribute="trailing" constant="22" id="Y8u-Rt-jOC"/>
+                                    <constraint firstItem="lq9-76-QHP" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="21" id="a7Q-0Z-pYI"/>
                                     <constraint firstAttribute="trailing" secondItem="EpT-VH-sgv" secondAttribute="trailing" constant="23" id="bO5-b7-iK6"/>
                                     <constraint firstItem="VPa-7R-Be1" firstAttribute="leading" secondItem="9fU-jS-Fpn" secondAttribute="leading" constant="24" id="dC2-ab-Qfu"/>
                                     <constraint firstItem="fwf-16-7Sx" firstAttribute="top" secondItem="VPa-7R-Be1" secondAttribute="bottom" constant="8" id="fyz-2Q-0Bj"/>
                                     <constraint firstItem="vNL-Gj-H8C" firstAttribute="top" secondItem="EpT-VH-sgv" secondAttribute="bottom" constant="19" id="hfD-mO-QSU"/>
-                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="width" secondItem="9fU-jS-Fpn" secondAttribute="width" multiplier="0.786364" id="iLZ-Jp-HTD"/>
                                     <constraint firstItem="c70-eM-nnq" firstAttribute="top" secondItem="fwf-16-7Sx" secondAttribute="bottom" constant="13" id="iTF-CQ-CeK"/>
                                     <constraint firstAttribute="trailing" secondItem="c70-eM-nnq" secondAttribute="trailing" constant="19" id="lgO-Jj-ta7"/>
-                                    <constraint firstItem="0CH-H0-k8j" firstAttribute="height" secondItem="9fU-jS-Fpn" secondAttribute="height" multiplier="0.0572289" id="ovK-uj-e3l"/>
                                     <constraint firstAttribute="trailing" secondItem="fwf-16-7Sx" secondAttribute="trailing" constant="23" id="xVK-cx-c5W"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -553,7 +564,6 @@
                         <outlet property="PasswordTextfield" destination="EpT-VH-sgv" id="mhU-Eq-yAs"/>
                         <outlet property="UsernameTexfield" destination="fwf-16-7Sx" id="h75-WD-a9I"/>
                         <segue destination="2Dx-7n-dFZ" kind="show" identifier="gotosignuppage" id="Z4s-5T-2h2"/>
-                        <segue destination="mTW-t2-C05" kind="show" id="0y3-3p-oYP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKs-Lg-LLl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -605,12 +615,22 @@
                                             <action selector="signupButton:" destination="2Dx-7n-dFZ" eventType="touchUpInside" id="FUB-bG-AvH"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZG9-9w-g3s">
+                                        <rect key="frame" x="22" y="236" width="176" height="30"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Back to Login"/>
+                                        <connections>
+                                            <action selector="Login:" destination="bUG-YX-OAQ" eventType="touchUpInside" id="eJq-fH-RbA"/>
+                                            <segue destination="bUG-YX-OAQ" kind="show" id="L0D-Uo-1qw"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.84999999999999998"/>
                                 <constraints>
                                     <constraint firstItem="LQZ-aU-0bx" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="20" id="04k-uV-SiE"/>
                                     <constraint firstItem="px5-G5-ThC" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="23" id="0Sy-8j-eMA"/>
+                                    <constraint firstItem="ZG9-9w-g3s" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="22" id="0cn-ZG-edm"/>
                                     <constraint firstItem="7e1-aW-k6W" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.106007" id="0ms-OF-K66"/>
                                     <constraint firstItem="px5-G5-ThC" firstAttribute="top" secondItem="f9t-XZ-3hN" secondAttribute="bottom" constant="8" id="2E6-CF-L8D"/>
                                     <constraint firstAttribute="trailing" secondItem="f9t-XZ-3hN" secondAttribute="trailing" constant="23" id="2eT-M0-n2r"/>
@@ -626,10 +646,12 @@
                                     <constraint firstItem="px5-G5-ThC" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.120141" id="WDu-H2-fQO"/>
                                     <constraint firstItem="f9t-XZ-3hN" firstAttribute="height" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="0.0742049" id="ZAp-pN-ZKN"/>
                                     <constraint firstItem="7e1-aW-k6W" firstAttribute="leading" secondItem="owa-iC-HUi" secondAttribute="leading" constant="22" id="azi-80-2gm"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZG9-9w-g3s" secondAttribute="trailing" constant="22" id="dO3-nM-Ljx"/>
                                     <constraint firstItem="hVi-eY-30U" firstAttribute="top" secondItem="LQZ-aU-0bx" secondAttribute="bottom" constant="8" id="i1t-7E-OVl"/>
                                     <constraint firstAttribute="width" secondItem="owa-iC-HUi" secondAttribute="height" multiplier="220:283" id="sfp-U9-C3Q"/>
                                     <constraint firstAttribute="trailing" secondItem="LQZ-aU-0bx" secondAttribute="trailing" constant="19" id="vyD-ZZ-UUQ"/>
                                     <constraint firstItem="7e1-aW-k6W" firstAttribute="top" secondItem="hVi-eY-30U" secondAttribute="bottom" constant="19" id="www-AF-mtN"/>
+                                    <constraint firstItem="ZG9-9w-g3s" firstAttribute="top" secondItem="7e1-aW-k6W" secondAttribute="bottom" constant="15" id="yyG-be-Rea"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layout.cornerRadius">
@@ -663,7 +685,7 @@
         <!--level-->
         <scene sceneID="q4X-MC-0fW">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" title="level" automaticallyAdjustsScrollViewInsets="NO" id="0X0-Ta-OAo" customClass="LevelPageViewController" customModule="Tidying_Up" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LevelPageViewController" title="level" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0X0-Ta-OAo" customClass="LevelPageViewController" customModule="Tidying_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="69M-5G-iOi">
                         <rect key="frame" x="0.0" y="0.0" width="4083" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -677,19 +699,339 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="Level page" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-zL-Uaa">
                                                 <rect key="frame" x="0.0" y="0.0" width="4083" height="414"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLZ-mV-ZVe" userLabel="Level1">
+                                                <rect key="frame" x="55" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="EmE-tH-gby"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jww-ij-IFp" userLabel="Level2">
+                                                <rect key="frame" x="233" y="107" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="zVd-Iy-SzG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnC-fW-5XI" userLabel="Level3">
+                                                <rect key="frame" x="461" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="9V5-ma-jSz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wks-cU-hVi" userLabel="Level4">
+                                                <rect key="frame" x="665" y="78" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="flB-vu-wJr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iD9-dG-0Yj" userLabel="Level5">
+                                                <rect key="frame" x="896" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="zvY-Ba-e3q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XE7-Eb-593" userLabel="Level6">
+                                                <rect key="frame" x="976" y="28" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="5Yd-3m-uIm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsc-XT-kj5" userLabel="Level7">
+                                                <rect key="frame" x="1213" y="28" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="cNW-co-1kj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dtb-Js-ccL" userLabel="Level8">
+                                                <rect key="frame" x="1358" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="87N-9Z-dTj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Siz-o8-Xqv" userLabel="Level9">
+                                                <rect key="frame" x="1463" y="28" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="9"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="aKr-ct-X0K"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCA-ri-tvo" userLabel="Level10">
+                                                <rect key="frame" x="1781" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="LZb-uV-dnY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSG-GA-LSE" userLabel="Level11">
+                                                <rect key="frame" x="1955" y="28" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="11"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="V70-Bw-c0z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6K-SK-SkM" userLabel="Level12">
+                                                <rect key="frame" x="2070" y="273" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="qTB-HG-XDG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0y-R2-A0a" userLabel="Level13">
+                                                <rect key="frame" x="2301" y="46" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="IM1-dw-RqS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRe-01-PA0" userLabel="Level14">
+                                                <rect key="frame" x="2459" y="216" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="14"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="tbD-fm-O2e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-1a-nFS" userLabel="Level15">
+                                                <rect key="frame" x="2595" y="46" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="3uo-FH-u0s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOm-Y0-6A9" userLabel="Level16">
+                                                <rect key="frame" x="3042" y="157" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="xoJ-j5-UE9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afN-Op-ivL" userLabel="Level17">
+                                                <rect key="frame" x="3443" y="8" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="17"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="7nU-na-T3G"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78I-zB-IC3" userLabel="Level18">
+                                                <rect key="frame" x="3522" y="10" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="18"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="y63-PR-EcJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf8-oB-vOf" userLabel="Level19">
+                                                <rect key="frame" x="3613" y="10" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="19"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="Dc8-Bd-d2s"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zn-Kd-CWk" userLabel="Level20">
+                                                <rect key="frame" x="3692" y="8" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="ecJ-dV-CMp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHZ-JU-20B" userLabel="Level22">
+                                                <rect key="frame" x="3909" y="0.0" width="134" height="279"/>
+                                                <state key="normal" backgroundImage="FinalStage"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA4-7u-9nE">
+                                                <rect key="frame" x="0.0" y="0.0" width="114" height="65"/>
+                                                <state key="normal" backgroundImage="back"/>
+                                                <connections>
+                                                    <segue destination="mTW-t2-C05" kind="show" id="zdm-Al-Sew"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcS-Mq-WMy" userLabel="Level21">
+                                                <rect key="frame" x="3771" y="8" width="71" height="100"/>
+                                                <state key="normal" backgroundImage="house"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                        <integer key="value" value="21"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="LevelSelection:" destination="0X0-Ta-OAo" eventType="touchUpInside" id="DKm-23-5Db"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
+                                            <constraint firstItem="Zsc-XT-kj5" firstAttribute="leading" secondItem="XE7-Eb-593" secondAttribute="trailing" constant="166" id="4hB-dY-PlF"/>
+                                            <constraint firstAttribute="bottom" secondItem="YCA-ri-tvo" secondAttribute="bottom" constant="41" id="61j-f8-SRb"/>
+                                            <constraint firstItem="BRe-01-PA0" firstAttribute="leading" secondItem="k6K-SK-SkM" secondAttribute="trailing" constant="318" id="6Xl-J5-Dhi"/>
                                             <constraint firstItem="6h9-zL-Uaa" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" id="9WI-5y-E8V"/>
+                                            <constraint firstAttribute="bottom" secondItem="BRe-01-PA0" secondAttribute="bottom" constant="98" id="BRs-lG-rOY"/>
+                                            <constraint firstItem="tfg-1a-nFS" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="46" id="BqE-T7-teY"/>
+                                            <constraint firstItem="jww-ij-IFp" firstAttribute="leading" secondItem="mUE-yg-yOY" secondAttribute="leading" constant="233" id="CpC-sd-aPw"/>
+                                            <constraint firstItem="OLZ-mV-ZVe" firstAttribute="width" secondItem="mUE-yg-yOY" secondAttribute="width" multiplier="0.0173892" id="D0g-Oo-6mx"/>
+                                            <constraint firstItem="Zsc-XT-kj5" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="28" id="DXc-fX-K45"/>
+                                            <constraint firstItem="OLZ-mV-ZVe" firstAttribute="leading" secondItem="mUE-yg-yOY" secondAttribute="leading" constant="55" id="DkJ-dA-lpQ"/>
+                                            <constraint firstItem="BA4-7u-9nE" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" id="Fdj-sh-VhR"/>
+                                            <constraint firstItem="MOm-Y0-6A9" firstAttribute="leading" secondItem="BRe-01-PA0" secondAttribute="trailing" constant="512" id="G9Z-Ar-LeU"/>
+                                            <constraint firstItem="VSG-GA-LSE" firstAttribute="leading" secondItem="Siz-o8-Xqv" secondAttribute="trailing" constant="421" id="HC4-6w-tnc"/>
+                                            <constraint firstItem="jww-ij-IFp" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="107" id="HKM-Lr-Aqq"/>
+                                            <constraint firstItem="afN-Op-ivL" firstAttribute="leading" secondItem="tfg-1a-nFS" secondAttribute="trailing" constant="777" id="K67-Ka-P7g"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dtb-Js-ccL" secondAttribute="bottom" constant="41" id="L4T-se-u8P"/>
+                                            <constraint firstItem="Siz-o8-Xqv" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="28" id="N3b-q8-uOw"/>
+                                            <constraint firstAttribute="bottom" secondItem="OLZ-mV-ZVe" secondAttribute="bottom" constant="41" id="PZd-EU-K1G"/>
+                                            <constraint firstItem="wf8-oB-vOf" firstAttribute="leading" secondItem="78I-zB-IC3" secondAttribute="trailing" constant="20" id="Pa9-ma-HXD"/>
+                                            <constraint firstItem="wcS-Mq-WMy" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="8" id="Pir-ps-8Z6"/>
+                                            <constraint firstItem="XE7-Eb-593" firstAttribute="leading" secondItem="Wks-cU-hVi" secondAttribute="trailing" constant="240" id="PjP-YT-ljK"/>
+                                            <constraint firstItem="7Zn-Kd-CWk" firstAttribute="leading" secondItem="wf8-oB-vOf" secondAttribute="trailing" constant="8" id="Qj5-9W-h2p"/>
+                                            <constraint firstItem="VSG-GA-LSE" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="28" id="SXy-Zc-OEk"/>
+                                            <constraint firstAttribute="bottom" secondItem="k6K-SK-SkM" secondAttribute="bottom" constant="41" id="SlY-hc-hXi"/>
+                                            <constraint firstItem="78I-zB-IC3" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="10" id="TfD-Sf-wSR"/>
+                                            <constraint firstItem="7Zn-Kd-CWk" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="8" id="WCU-yX-cXu"/>
+                                            <constraint firstItem="MOm-Y0-6A9" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="157" id="YFp-oT-9Ed"/>
+                                            <constraint firstItem="XE7-Eb-593" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="28" id="YmI-PK-6FD"/>
+                                            <constraint firstItem="a0y-R2-A0a" firstAttribute="leading" secondItem="VSG-GA-LSE" secondAttribute="trailing" constant="275" id="ZVK-fZ-mw7"/>
+                                            <constraint firstItem="iD9-dG-0Yj" firstAttribute="leading" secondItem="pnC-fW-5XI" secondAttribute="trailing" constant="364" id="ZWm-BT-hJ7"/>
+                                            <constraint firstItem="Siz-o8-Xqv" firstAttribute="leading" secondItem="Zsc-XT-kj5" secondAttribute="trailing" constant="179" id="abF-dA-LYO"/>
+                                            <constraint firstItem="wcS-Mq-WMy" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="8" id="bZA-TX-6cq"/>
+                                            <constraint firstItem="Dtb-Js-ccL" firstAttribute="leading" secondItem="iD9-dG-0Yj" secondAttribute="trailing" constant="391" id="cA7-lB-PeS"/>
+                                            <constraint firstItem="Wks-cU-hVi" firstAttribute="leading" secondItem="jww-ij-IFp" secondAttribute="trailing" constant="361" id="cCS-lQ-xmp"/>
+                                            <constraint firstAttribute="trailing" secondItem="sHZ-JU-20B" secondAttribute="trailing" constant="40" id="ccf-bJ-un8"/>
+                                            <constraint firstItem="OLZ-mV-ZVe" firstAttribute="height" secondItem="mUE-yg-yOY" secondAttribute="height" multiplier="0.241546" id="dI8-kS-UhV"/>
+                                            <constraint firstItem="afN-Op-ivL" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="8" id="e4k-gj-ihD"/>
+                                            <constraint firstItem="sHZ-JU-20B" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" id="fO9-aU-cZI"/>
+                                            <constraint firstAttribute="bottom" secondItem="pnC-fW-5XI" secondAttribute="bottom" constant="41" id="fTm-tA-e9h"/>
+                                            <constraint firstItem="BA4-7u-9nE" firstAttribute="height" secondItem="mUE-yg-yOY" secondAttribute="height" multiplier="0.157005" id="i5A-EQ-EAa"/>
                                             <constraint firstAttribute="bottom" secondItem="6h9-zL-Uaa" secondAttribute="bottom" id="jc2-8y-KAb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wks-cU-hVi" secondAttribute="bottom" constant="236" id="kIB-Lr-Hyf"/>
+                                            <constraint firstItem="pnC-fW-5XI" firstAttribute="leading" secondItem="OLZ-mV-ZVe" secondAttribute="trailing" constant="335" id="kQa-a9-Xze"/>
+                                            <constraint firstItem="wf8-oB-vOf" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="10" id="kum-Rr-U2H"/>
                                             <constraint firstItem="6h9-zL-Uaa" firstAttribute="leading" secondItem="mUE-yg-yOY" secondAttribute="leading" id="nD7-gO-Sen"/>
+                                            <constraint firstItem="YCA-ri-tvo" firstAttribute="leading" secondItem="Dtb-Js-ccL" secondAttribute="trailing" constant="352" id="nfb-jK-hJd"/>
                                             <constraint firstAttribute="trailing" secondItem="6h9-zL-Uaa" secondAttribute="trailing" id="o1A-64-zcL"/>
+                                            <constraint firstItem="wcS-Mq-WMy" firstAttribute="leading" secondItem="7Zn-Kd-CWk" secondAttribute="trailing" constant="8" id="qcX-03-bAW"/>
+                                            <constraint firstItem="BA4-7u-9nE" firstAttribute="width" secondItem="mUE-yg-yOY" secondAttribute="width" multiplier="0.0279206" id="qeX-7f-NFf"/>
+                                            <constraint firstItem="tfg-1a-nFS" firstAttribute="leading" secondItem="a0y-R2-A0a" secondAttribute="trailing" constant="223" id="rjA-VQ-IEh"/>
+                                            <constraint firstAttribute="bottom" secondItem="iD9-dG-0Yj" secondAttribute="bottom" constant="41" id="ueK-ug-agT"/>
+                                            <constraint firstItem="BA4-7u-9nE" firstAttribute="leading" secondItem="mUE-yg-yOY" secondAttribute="leading" id="v1n-YO-zwb"/>
+                                            <constraint firstItem="78I-zB-IC3" firstAttribute="leading" secondItem="afN-Op-ivL" secondAttribute="trailing" constant="8" id="vZM-aj-snh"/>
+                                            <constraint firstAttribute="bottom" secondItem="Siz-o8-Xqv" secondAttribute="bottom" constant="286" id="wJT-Zk-po7"/>
+                                            <constraint firstItem="a0y-R2-A0a" firstAttribute="top" secondItem="mUE-yg-yOY" secondAttribute="top" constant="46" id="xOM-Uj-oys"/>
+                                            <constraint firstItem="k6K-SK-SkM" firstAttribute="leading" secondItem="YCA-ri-tvo" secondAttribute="trailing" constant="218" id="yLj-UN-Wdf"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="mUE-yg-yOY" firstAttribute="leading" secondItem="7JM-Qs-HMZ" secondAttribute="leading" id="Joy-O5-keH"/>
                                     <constraint firstItem="7JM-Qs-HMZ" firstAttribute="trailing" secondItem="mUE-yg-yOY" secondAttribute="trailing" id="QH0-5R-pmf"/>
-                                    <constraint firstItem="mUE-yg-yOY" firstAttribute="leading" secondItem="7JM-Qs-HMZ" secondAttribute="leading" id="ZtU-Oh-9jv"/>
                                     <constraint firstItem="mUE-yg-yOY" firstAttribute="top" secondItem="wfP-Rb-Wvh" secondAttribute="top" id="bkg-YX-eR7"/>
                                     <constraint firstItem="7JM-Qs-HMZ" firstAttribute="bottom" secondItem="mUE-yg-yOY" secondAttribute="bottom" id="cOr-lu-lj3"/>
                                     <constraint firstItem="mUE-yg-yOY" firstAttribute="height" secondItem="rD0-L0-Tv9" secondAttribute="height" id="ixM-UM-8wL"/>
@@ -704,23 +1046,49 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wf8-oB-vOf" firstAttribute="width" secondItem="69M-5G-iOi" secondAttribute="width" multiplier="0.0173892" id="29q-ce-FJq"/>
+                            <constraint firstItem="wf8-oB-vOf" firstAttribute="height" secondItem="69M-5G-iOi" secondAttribute="height" multiplier="0.241546" id="9YQ-0B-6Dc"/>
                             <constraint firstItem="wfP-Rb-Wvh" firstAttribute="top" secondItem="69M-5G-iOi" secondAttribute="top" id="CYT-3g-cJL"/>
+                            <constraint firstItem="sHZ-JU-20B" firstAttribute="width" secondItem="69M-5G-iOi" secondAttribute="width" multiplier="0.032819" id="FAs-8O-ChJ"/>
+                            <constraint firstItem="wfP-Rb-Wvh" firstAttribute="leading" secondItem="69M-5G-iOi" secondAttribute="leading" id="GOP-br-2vR"/>
                             <constraint firstAttribute="trailing" secondItem="wfP-Rb-Wvh" secondAttribute="trailing" id="Jh3-2M-hs5"/>
-                            <constraint firstItem="wfP-Rb-Wvh" firstAttribute="leading" secondItem="69M-5G-iOi" secondAttribute="leading" id="hE1-hl-LRA"/>
+                            <constraint firstItem="sHZ-JU-20B" firstAttribute="height" secondItem="69M-5G-iOi" secondAttribute="height" multiplier="0.673913" id="UFH-Oj-Evl"/>
                             <constraint firstAttribute="bottom" secondItem="wfP-Rb-Wvh" secondAttribute="bottom" id="uNX-07-qMI"/>
-                            <constraint firstItem="wfP-Rb-Wvh" firstAttribute="leading" secondItem="69M-5G-iOi" secondAttribute="leading" id="yfu-aD-UFf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jjc-L5-TL6"/>
                     </view>
+                    <navigationItem key="navigationItem" id="if5-UJ-BHH"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="4083" height="414"/>
                     <connections>
-                        <segue destination="zwk-jD-Vkv" kind="show" identifier="tolevelselection" id="COX-wJ-oHa"/>
+                        <outlet property="level1" destination="OLZ-mV-ZVe" id="LX2-3n-HtJ"/>
+                        <outlet property="level10" destination="YCA-ri-tvo" id="D3S-Fd-QmX"/>
+                        <outlet property="level11" destination="VSG-GA-LSE" id="mq0-q8-Rqw"/>
+                        <outlet property="level12" destination="k6K-SK-SkM" id="ykO-1a-W6f"/>
+                        <outlet property="level13" destination="a0y-R2-A0a" id="ghS-to-9ex"/>
+                        <outlet property="level14" destination="BRe-01-PA0" id="w3X-oe-VEt"/>
+                        <outlet property="level15" destination="tfg-1a-nFS" id="kC7-T3-Q7g"/>
+                        <outlet property="level16" destination="MOm-Y0-6A9" id="3ZI-zf-Mba"/>
+                        <outlet property="level17" destination="afN-Op-ivL" id="yMh-st-8zx"/>
+                        <outlet property="level18" destination="78I-zB-IC3" id="sX3-Bb-vDf"/>
+                        <outlet property="level19" destination="wf8-oB-vOf" id="LLz-aT-Bln"/>
+                        <outlet property="level2" destination="jww-ij-IFp" id="BcU-fe-xbt"/>
+                        <outlet property="level20" destination="7Zn-Kd-CWk" id="ZU9-R7-VEH"/>
+                        <outlet property="level21" destination="wcS-Mq-WMy" id="qXD-l3-AqH"/>
+                        <outlet property="level22" destination="sHZ-JU-20B" id="2Wl-D2-X7a"/>
+                        <outlet property="level3" destination="pnC-fW-5XI" id="KB6-t9-8fT"/>
+                        <outlet property="level4" destination="Wks-cU-hVi" id="zIb-Gi-CsF"/>
+                        <outlet property="level5" destination="iD9-dG-0Yj" id="r2o-J4-lxe"/>
+                        <outlet property="level6" destination="XE7-Eb-593" id="nMY-M0-sTX"/>
+                        <outlet property="level7" destination="Zsc-XT-kj5" id="G61-fO-jE4"/>
+                        <outlet property="level8" destination="Dtb-Js-ccL" id="dWr-zk-iR2"/>
+                        <outlet property="level9" destination="Siz-o8-Xqv" id="QwB-dO-c8i"/>
+                        <segue destination="zwk-jD-Vkv" kind="show" identifier="LevelSelection" id="4Vt-w6-ZrW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g3v-fq-cWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1001" y="1523"/>
+            <point key="canvasLocation" x="-1001.4508928571428" y="1521.7391304347827"/>
         </scene>
         <!--Payment-->
         <scene sceneID="hvc-20-tmZ">
@@ -862,10 +1230,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk3-J9-Y6W">
                                         <rect key="frame" x="0.0" y="83" width="203" height="103"/>
                                         <state key="normal" backgroundImage="shop"/>
+                                        <connections>
+                                            <segue destination="mTW-t2-C05" kind="show" id="dJG-qQ-NOR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZJ-ye-0ku">
                                         <rect key="frame" x="0.0" y="-10" width="203" height="103"/>
                                         <state key="normal" backgroundImage="level"/>
+                                        <connections>
+                                            <segue destination="0X0-Ta-OAo" kind="show" id="MUN-dx-BOa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -913,175 +1287,28 @@
             </objects>
             <point key="canvasLocation" x="-1156.4732142857142" y="5302.898550724638"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="Kcr-Zm-T1g">
-            <objects>
-                <viewController title="Settings" id="i7t-Rm-iAa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QHZ-oQ-UH9">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="vIN-ah-CzY">
-                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MIR-ex-tw3">
-                                <rect key="frame" x="328" y="39" width="495" height="308"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmN-PH-LqJ">
-                                        <rect key="frame" x="59" y="71" width="76" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTq-M5-O4a">
-                                        <rect key="frame" x="207" y="71" width="88" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recharge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiP-31-hru">
-                                        <rect key="frame" x="343" y="70" width="118" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-s5-cOe">
-                                        <rect key="frame" x="52" y="110" width="75" height="88"/>
-                                        <state key="normal" backgroundImage="sound"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cV7-8f-gpd">
-                                        <rect key="frame" x="210" y="110" width="75" height="88"/>
-                                        <state key="normal" backgroundImage="Switch"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-ea-ECZ">
-                                        <rect key="frame" x="368" y="110" width="75" height="88"/>
-                                        <state key="normal" backgroundImage="recharge"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="YiP-31-hru" firstAttribute="leading" secondItem="CTq-M5-O4a" secondAttribute="trailing" priority="750" constant="48" id="0Ye-9o-98K"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="height" secondItem="MIR-ex-tw3" secondAttribute="height" multiplier="0.285714" id="9JF-Wd-7vo"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="top" secondItem="CTq-M5-O4a" secondAttribute="bottom" constant="7" id="9rI-wW-UUk"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="centerX" secondItem="MIR-ex-tw3" secondAttribute="centerX" id="AOU-f1-o0F"/>
-                                    <constraint firstItem="8R9-s5-cOe" firstAttribute="top" secondItem="kmN-PH-LqJ" secondAttribute="bottom" constant="7" id="BFJ-xb-9Dz"/>
-                                    <constraint firstItem="kIT-ea-ECZ" firstAttribute="top" secondItem="YiP-31-hru" secondAttribute="bottom" constant="7" id="CGN-hZ-M3m"/>
-                                    <constraint firstItem="kmN-PH-LqJ" firstAttribute="leading" secondItem="MIR-ex-tw3" secondAttribute="leading" constant="59" id="Pry-CW-N7e"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="width" secondItem="MIR-ex-tw3" secondAttribute="width" multiplier="0.151515" id="Syz-Bp-MwK"/>
-                                    <constraint firstItem="kIT-ea-ECZ" firstAttribute="width" secondItem="MIR-ex-tw3" secondAttribute="width" multiplier="0.151515" id="Tk1-MV-R4u"/>
-                                    <constraint firstItem="kmN-PH-LqJ" firstAttribute="height" secondItem="MIR-ex-tw3" secondAttribute="height" multiplier="0.107383" constant="-1.0738255033557067" id="VWR-4k-UQy"/>
-                                    <constraint firstItem="kIT-ea-ECZ" firstAttribute="height" secondItem="MIR-ex-tw3" secondAttribute="height" multiplier="0.285714" id="Vxi-7k-tXw"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="centerY" secondItem="MIR-ex-tw3" secondAttribute="centerY" id="WcO-D0-6Xt"/>
-                                    <constraint firstItem="YiP-31-hru" firstAttribute="height" secondItem="MIR-ex-tw3" secondAttribute="height" multiplier="0.110738" constant="-1.1073825503355721" id="Wi6-tF-xt0"/>
-                                    <constraint firstItem="CTq-M5-O4a" firstAttribute="height" secondItem="MIR-ex-tw3" secondAttribute="height" multiplier="0.107383" constant="-1.0738255033557067" id="Xkv-b4-pXK"/>
-                                    <constraint firstItem="kmN-PH-LqJ" firstAttribute="leading" secondItem="MIR-ex-tw3" secondAttribute="leading" priority="750" constant="59" id="Zc0-Iv-7zy"/>
-                                    <constraint firstAttribute="trailing" secondItem="YiP-31-hru" secondAttribute="trailing" priority="750" constant="34" id="cAk-ZY-Xiz"/>
-                                    <constraint firstItem="8R9-s5-cOe" firstAttribute="centerY" secondItem="MIR-ex-tw3" secondAttribute="centerY" id="gd2-n4-SRu"/>
-                                    <constraint firstItem="YiP-31-hru" firstAttribute="width" secondItem="MIR-ex-tw3" secondAttribute="width" multiplier="0.242798" constant="-2.1851851851851904" id="hXH-TE-rur"/>
-                                    <constraint firstItem="kIT-ea-ECZ" firstAttribute="centerY" secondItem="MIR-ex-tw3" secondAttribute="centerY" id="olB-sj-If9"/>
-                                    <constraint firstItem="CTq-M5-O4a" firstAttribute="width" secondItem="MIR-ex-tw3" secondAttribute="width" multiplier="0.18107" constant="-1.6296296296296333" id="q3i-ab-5HD"/>
-                                    <constraint firstItem="cV7-8f-gpd" firstAttribute="leading" secondItem="8R9-s5-cOe" secondAttribute="trailing" constant="83" id="uox-3w-ulo"/>
-                                    <constraint firstItem="kmN-PH-LqJ" firstAttribute="width" secondItem="MIR-ex-tw3" secondAttribute="width" multiplier="0.156379" constant="-1.407407407407419" id="wgU-Ra-IH9"/>
-                                    <constraint firstItem="kIT-ea-ECZ" firstAttribute="leading" secondItem="cV7-8f-gpd" secondAttribute="trailing" constant="83" id="z1h-r9-D4a"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-tR-NKm" userLabel="NavigationView">
-                                <rect key="frame" x="44" y="-20" width="203" height="393"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-g0-BAD">
-                                        <rect key="frame" x="0.0" y="269" width="203" height="103"/>
-                                        <state key="normal" backgroundImage="money"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8Q-Nx-L1h">
-                                        <rect key="frame" x="0.0" y="176" width="203" height="103"/>
-                                        <state key="normal" backgroundImage="Settings"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-u4-ZDM">
-                                        <rect key="frame" x="0.0" y="83" width="203" height="103"/>
-                                        <state key="normal" backgroundImage="shop"/>
-                                        <connections>
-                                            <segue destination="mTW-t2-C05" kind="show" id="a03-Je-cCb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIV-wV-fbH">
-                                        <rect key="frame" x="0.0" y="-10" width="203" height="103"/>
-                                        <state key="normal" backgroundImage="level"/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XlK-u4-ZDM" secondAttribute="trailing" id="6eU-UV-nqH"/>
-                                    <constraint firstItem="XlK-u4-ZDM" firstAttribute="width" secondItem="5qv-tR-NKm" secondAttribute="width" id="7Mh-fx-ogT"/>
-                                    <constraint firstItem="XlK-u4-ZDM" firstAttribute="leading" secondItem="5qv-tR-NKm" secondAttribute="leading" id="7WD-UX-nvS"/>
-                                    <constraint firstItem="XlK-u4-ZDM" firstAttribute="height" secondItem="5qv-tR-NKm" secondAttribute="height" multiplier="0.262087" id="CRS-HH-Q6f"/>
-                                    <constraint firstItem="iIV-wV-fbH" firstAttribute="top" secondItem="5qv-tR-NKm" secondAttribute="top" constant="-10" id="EHs-qY-p3S"/>
-                                    <constraint firstItem="v8Q-Nx-L1h" firstAttribute="top" secondItem="XlK-u4-ZDM" secondAttribute="bottom" constant="-10" id="EbS-4w-OGV"/>
-                                    <constraint firstItem="XlK-u4-ZDM" firstAttribute="top" secondItem="iIV-wV-fbH" secondAttribute="bottom" constant="-10" id="ErK-P4-Sb7"/>
-                                    <constraint firstItem="iIV-wV-fbH" firstAttribute="leading" secondItem="5qv-tR-NKm" secondAttribute="leading" id="Olt-I0-Nns"/>
-                                    <constraint firstItem="dkG-g0-BAD" firstAttribute="width" secondItem="5qv-tR-NKm" secondAttribute="width" id="Tdy-ab-XRv"/>
-                                    <constraint firstItem="v8Q-Nx-L1h" firstAttribute="width" secondItem="5qv-tR-NKm" secondAttribute="width" id="XnI-e5-BRZ"/>
-                                    <constraint firstItem="v8Q-Nx-L1h" firstAttribute="height" secondItem="5qv-tR-NKm" secondAttribute="height" multiplier="0.262087" id="cx0-63-Qd0"/>
-                                    <constraint firstAttribute="trailing" secondItem="v8Q-Nx-L1h" secondAttribute="trailing" id="hjx-5l-bXH"/>
-                                    <constraint firstItem="dkG-g0-BAD" firstAttribute="height" secondItem="5qv-tR-NKm" secondAttribute="height" multiplier="0.262087" id="hza-iK-N8u"/>
-                                    <constraint firstItem="iIV-wV-fbH" firstAttribute="height" secondItem="5qv-tR-NKm" secondAttribute="height" multiplier="0.262087" id="iT3-fw-0do"/>
-                                    <constraint firstItem="iIV-wV-fbH" firstAttribute="width" secondItem="5qv-tR-NKm" secondAttribute="width" id="ie7-cM-bL7"/>
-                                    <constraint firstItem="v8Q-Nx-L1h" firstAttribute="leading" secondItem="5qv-tR-NKm" secondAttribute="leading" id="iqJ-2G-JQx"/>
-                                    <constraint firstItem="dkG-g0-BAD" firstAttribute="top" secondItem="v8Q-Nx-L1h" secondAttribute="bottom" constant="-10" id="liG-WY-TMb"/>
-                                    <constraint firstAttribute="trailing" secondItem="iIV-wV-fbH" secondAttribute="trailing" id="qOc-ky-i15"/>
-                                    <constraint firstAttribute="trailing" secondItem="dkG-g0-BAD" secondAttribute="trailing" id="r0T-Il-NuV"/>
-                                    <constraint firstItem="dkG-g0-BAD" firstAttribute="leading" secondItem="5qv-tR-NKm" secondAttribute="leading" id="u8i-mn-XBk"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="MIR-ex-tw3" firstAttribute="top" secondItem="mTc-QG-jMJ" secondAttribute="top" constant="39" id="08J-Wv-f8E"/>
-                            <constraint firstItem="5qv-tR-NKm" firstAttribute="width" secondItem="QHZ-oQ-UH9" secondAttribute="width" multiplier="0.226562" id="3L4-rh-Crn"/>
-                            <constraint firstItem="MIR-ex-tw3" firstAttribute="height" secondItem="QHZ-oQ-UH9" secondAttribute="height" multiplier="0.719807" constant="10" id="7ZQ-dP-eh4"/>
-                            <constraint firstItem="vIN-ah-CzY" firstAttribute="top" secondItem="QHZ-oQ-UH9" secondAttribute="top" id="9es-IT-Zi7"/>
-                            <constraint firstItem="vIN-ah-CzY" firstAttribute="leading" secondItem="QHZ-oQ-UH9" secondAttribute="leading" id="DYN-HU-dBu"/>
-                            <constraint firstItem="MIR-ex-tw3" firstAttribute="width" secondItem="QHZ-oQ-UH9" secondAttribute="width" multiplier="0.542411" constant="9" id="FAG-u6-ka1"/>
-                            <constraint firstItem="5qv-tR-NKm" firstAttribute="height" secondItem="QHZ-oQ-UH9" secondAttribute="height" multiplier="0.949275" id="UYF-xr-mhs"/>
-                            <constraint firstAttribute="trailing" secondItem="vIN-ah-CzY" secondAttribute="trailing" id="Z6R-n5-Vi2"/>
-                            <constraint firstItem="8R9-s5-cOe" firstAttribute="height" secondItem="QHZ-oQ-UH9" secondAttribute="height" multiplier="0.21256" id="eJD-oN-PkF"/>
-                            <constraint firstItem="5qv-tR-NKm" firstAttribute="leading" secondItem="mTc-QG-jMJ" secondAttribute="leading" id="k2J-Ml-21G"/>
-                            <constraint firstItem="5qv-tR-NKm" firstAttribute="top" secondItem="QHZ-oQ-UH9" secondAttribute="top" constant="-20" id="ogl-Me-1tV"/>
-                            <constraint firstItem="8R9-s5-cOe" firstAttribute="width" secondItem="QHZ-oQ-UH9" secondAttribute="width" multiplier="0.0837054" id="pT6-mT-wpN"/>
-                            <constraint firstItem="MIR-ex-tw3" firstAttribute="leading" secondItem="5qv-tR-NKm" secondAttribute="trailing" constant="81" id="vOO-Lh-VgD"/>
-                            <constraint firstAttribute="bottom" secondItem="vIN-ah-CzY" secondAttribute="bottom" id="zwe-Wr-OXU"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="mTc-QG-jMJ"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jm9-5J-ONW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jib-bX-Y3u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="0UC-pW-Dh6"/>
-            </objects>
-            <point key="canvasLocation" x="-1156" y="4490"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z4s-5T-2h2"/>
-        <segue reference="a03-Je-cCb"/>
+        <segue reference="b0X-mb-mtw"/>
+        <segue reference="lSQ-QV-1UF"/>
+        <segue reference="L0D-Uo-1qw"/>
+        <segue reference="zdm-Al-Sew"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CTIdle (1)" width="416" height="454"/>
-        <image name="GoogleLogo" width="22" height="22"/>
+        <image name="FinalStage" width="117" height="226"/>
         <image name="Level page" width="4083" height="349"/>
         <image name="Settings" width="107" height="64"/>
-        <image name="Switch" width="61" height="61"/>
         <image name="arrow.left.circle.fill" catalog="system" width="128" height="121"/>
         <image name="arrow.right.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="back" width="114" height="65"/>
         <image name="background" width="812" height="367"/>
         <image name="cat" width="178" height="214"/>
         <image name="dinosaur" width="178" height="214"/>
         <image name="dog" width="178" height="214"/>
         <image name="girlzombie" width="178" height="214"/>
         <image name="guyzombie" width="178" height="214"/>
+        <image name="house" width="71" height="100"/>
         <image name="knight-2" width="178" height="214"/>
         <image name="lattern" width="178" height="214"/>
         <image name="level" width="107" height="64"/>
@@ -1089,11 +1316,9 @@
         <image name="money" width="107" height="64"/>
         <image name="ninja" width="178" height="214"/>
         <image name="ninjagirl" width="178" height="214"/>
-        <image name="recharge" width="58" height="61"/>
         <image name="robot" width="178" height="214"/>
         <image name="santa" width="178" height="214"/>
         <image name="shop" width="107" height="64"/>
-        <image name="sound" width="60" height="60"/>
         <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>

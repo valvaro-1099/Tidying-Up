@@ -17,7 +17,7 @@ class LevelInsideViewController: UIViewController {
         //create a linked list and append all the user character in it
         DLL.append(value: UIImage.init(named: "CTIdle (1)")!)
         DLL.append(value: UIImage.init(named: "Idle__000")!)
-        DLL.append(value: UIImage.init(named: "Idle (1)")! )
+        DLL.append(value: UIImage.init(named: "zgAttack (1)")!)
         Character.image = DLL.head?.value
         
     }
@@ -49,7 +49,14 @@ class LevelInsideViewController: UIViewController {
         }
         
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        levelcompleted+=1
+    }
     
 
+    @IBAction func PlayLevel(_ sender: Any) {
+        performSegue(withIdentifier: "ToGameScene", sender: self)
+        
+    }
     
 }
