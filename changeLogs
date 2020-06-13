@@ -1,0 +1,65 @@
+16 may 2020
+- create github repository and commit a blank game application
+17 may 2020
+- search sprites/images used for the game
+19 may 2020
+- work on character animation for the game
+- using texturearray to animate the player character 
+- encounter problem with transitioning player 
+- search more animation for character that can be used in the game
+
+20 may 2020 
+- work on animation transition problem. The animation always blink for some reason
+-
+23 may 2020
+- work on sign up and sign in function 
+- configure firebase with application
+- Create the Sign in and sign up page 
+- Succesfully create user and login function 
+28 may 2020
+- Create the level page, levelinside page, shop level, payment page
+- encouter problem with resizing certain elements to fit on all devices
+- create scrollview for level page
+29 may 2020
+- work on constraint to make all pages fit all devices.
+- Could not fix page to fit all devices as UIImage and UItext scale differently decide to use image with text in it
+- create scrollview for shop page 
+31 may 2020 
+- work on joytick for the players movement 
+1 june 2020
+- work on jostick and now joystick can move player around
+- work on camera to follow the player when the player is moving
+- encounter problem as if the camera moved joystick which is its child does not recognize user touch
+3 june 2020
+- work on email and password validation for the sign up page and login page
+- create alert to alert user if something is wrong with the password or email
+- encounter problem as password cannot detect if there is a special character in it 
+4 june 2020
+- configure for google automatic login 
+- work on google automatic log in 
+10 june 2020 
+- joystick is now sensitive to touch even though it moves with the camera
+- add action button for player to pick up items and put it in a bag
+- create timer to track the time
+12 june 2020
+- create the tutorial page
+- create the comment for direction for the user
+- check up on the sign up validation as it was not working last time decided to leave the special character check function
+- decide not to use google sign in feature as they was no time
+- create phsyicbody for the player and item
+- create bag to store the item
+- check function to see  which item is pick up
+- create the bag to show if the player is touch 
+- work on the level array to speficy level objective, time limit for the game
+- create sliding bar for choosing character in the levelinside page
+- work on level page unlock feature
+13 june 2020
+- redesign the application class and how it interact
+-  work on enemy in the tutorial page 
+- work on finish line to direct user to level page
+- finish on level page unlock feature where level button becomes opaque
+- level page now connects with different level
+- create remaining levels
+- create game over function in tutorial
+
+
